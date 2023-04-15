@@ -33,13 +33,13 @@ struct wordView: View {
                 }
             }
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 10) {
                 Text(explanation)
-                    .font(.system(size: 20, weight: .regular))
+                    .font(.system(size: 25, weight: .regular))
                 Text(example1)
-                    .font(.system(size: 20, weight: .regular))
+                    .font(.system(size: 25, weight: .regular))
                 Text(example2)
-                    .font(.system(size: 20, weight: .regular))
+                    .font(.system(size: 25, weight: .regular))
             }
         }
         .foregroundColor(.white)
