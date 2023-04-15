@@ -18,8 +18,6 @@ struct ChulLeongChulLeongView: View {
             Color(UIColor.black)
                 .ignoresSafeArea()
             VStack(spacing: 15){
-                wordView(word: "출렁출렁", meaning: "[Chul-Leong-Chul-Leong]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example1: "ex> It has been raining 주룩주룩 all through the night.", example2: "ex> It has been raining 주룩주룩 all through the night.") //TODO: 해당 단어만 attributed text로 따로 굵기, 색상 다르게 하면 좋을 듯
-                
                 // TODO: 간격 조절 필요
                 Text("Draw any characters in below.")
                     .font(.system(size: 30, weight: .regular))
@@ -48,6 +46,8 @@ struct ChulLeongChulLeongView: View {
                         }
                 )
             }
+            
+//            wordView(word: "출렁출렁", meaning: "[Chul-Leong-Chul-Leong]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example1: "ex> It has been raining 주룩주룩 all through the night.", example2: "ex> It has been raining 주룩주룩 all through the night.") //TODO: 해당 단어만 attributed text로 따로 굵기, 색상 다르게 하면 좋을 듯
         }
 
     }
