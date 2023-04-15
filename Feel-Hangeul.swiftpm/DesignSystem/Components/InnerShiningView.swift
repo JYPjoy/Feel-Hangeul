@@ -24,13 +24,11 @@ struct InnerShiningView: View {
                 .frame(width: 50, height: 300, alignment: .bottomLeading)
                 .overlay(
                     VStack(spacing: 30) {
+                        //CGAffineTransform
                         Text("").foregroundColor(.yellow).font(.system(size: 35))
-                        
                         Text("").foregroundColor(.yellow).font(.system(size: 35))
-               
                         Text("").foregroundColor(.yellow).font(.system(size: 35))
                         Text("쨍").foregroundColor(.yellow).font(.system(size: 35))
-             
                         Text("쨍").foregroundColor(.yellow).font(.system(size: 25))
                         Text("쨍").foregroundColor(.yellow).font(.system(size: 20))
                         Text("쨍").foregroundColor(.yellow).font(.system(size: 15))

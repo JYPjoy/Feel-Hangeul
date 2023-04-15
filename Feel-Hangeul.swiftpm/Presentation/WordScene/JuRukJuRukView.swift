@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct JuRukJuRukView: View {
+
     
     var body: some View {
         ZStack{
+            Color.black
+                .edgesIgnoringSafeArea(.all)
             TimelineView(.periodic(from: .now, by: 0.05)) { timeline in
                 JuRukJuRukCanvas(date: timeline.date)
             }

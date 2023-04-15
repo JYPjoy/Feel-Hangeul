@@ -15,6 +15,12 @@ struct JjaengJjaengView: View {
     @State var floatLike: Bool = false
     @State var showFlare: Bool = false
     
+    var shining: some View {
+        ShiningView(isAnimating: $floatLike)
+            .offset(y: -130)
+            .animation(Animation.spring().delay(animationDuration / 2))
+    }
+    
     // MARK:- views
     var body: some View {
         ZStack {
@@ -22,9 +28,7 @@ struct JjaengJjaengView: View {
                 .edgesIgnoringSafeArea(.all)
             ZStack(){
                 if (floatLike) {
-                    ShiningView(isAnimating: $floatLike)
-                        .offset(y: -130)
-                        .animation(Animation.spring().delay(animationDuration / 2))
+                    shining
                 }
                 Circle()
                     .foregroundColor(self.isAnimating ? Color.likeColor : Color.likeOverlay)
@@ -36,7 +40,7 @@ struct JjaengJjaengView: View {
             if (!floatLike) {
                 self.floatLike.toggle()
                 self.isAnimating.toggle()
-                Timer.scheduledTimer(withTimeInterval: animationDuration, repeats: false) { _ in
+                Timer.scheduledTimer(withTimeInterval: animationDuration, repeats: true) { _ in
                     self.shrinkIcon.toggle()
                     self.showFlare.toggle()
                 }

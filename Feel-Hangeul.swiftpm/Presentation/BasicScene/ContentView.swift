@@ -22,7 +22,7 @@ struct ContentView: View {
 
             Button {
                 TTSManager.stop()
-                coordinator.push(destination: .content2)
+                coordinator.push(destination: .jurukjuruk)
             } label: {
                 Text("다음으로")
                     .foregroundColor(.red)
