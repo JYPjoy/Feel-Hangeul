@@ -19,7 +19,7 @@ struct ChulLeongChulLeongView: View {
                 .ignoresSafeArea()
             VStack(spacing: 15){
                 // TODO: 간격 조절 필요
-                Text("Draw any characters in below.")
+                Text("Drag any characters in below.")
                     .font(.system(size: 30, weight: .regular))
                     .foregroundColor(.white)
                 HStack(spacing: 0) {
