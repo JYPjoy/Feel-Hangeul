@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct BeatingHeart: View {
+struct DugeunDugeunView: View {
     @State var scale : CGFloat = 0.5
     
     var body: some View {
@@ -32,11 +32,7 @@ struct Heart: View {
     let date: Date
 
     var body: some View {
-        ZStack{
-            Color.black
-                .ignoresSafeArea(.all)
             HStack {
-                
                 Text("두근")
                     .font(.largeTitle)
                     .foregroundColor(.red)
@@ -51,9 +47,10 @@ struct Heart: View {
                     }
                     .onAppear {
                         advanceAnimationPhase()
+                        //TODO: 음원 추가
                     }
             }
-        }
+
     }
 
     func advanceAnimationPhase() {
@@ -62,9 +59,9 @@ struct Heart: View {
 }
 
 
-struct BeatingHeart_Previews: PreviewProvider {
+struct  DugeunDugeunView_Previews: PreviewProvider {
     static var previews: some View {
-        BeatingHeart()
+        DugeunDugeunView()
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

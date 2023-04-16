@@ -55,7 +55,7 @@ struct HeartBeatView : View {
                 .foregroundColor(.red)
             
         }
-  
+    
         .frame(height: 120) // changed from 300 to 120
         .animation(.spring())
         .onReceive(timer, perform: { _ in
