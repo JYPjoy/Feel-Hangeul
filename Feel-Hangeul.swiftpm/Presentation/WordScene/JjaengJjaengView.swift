@@ -20,7 +20,10 @@ struct JjaengJjaengView: View {
             .offset(y: -130)
             .animation(Animation.spring().delay(animationDuration / 2))
     }
-    
+    var sun: some View {
+        Circle()
+    }
+
     // MARK:- views
     var body: some View {
         ZStack {
@@ -30,14 +33,15 @@ struct JjaengJjaengView: View {
                 if (floatLike) {
                     shining
                 }
-                Circle()
-                    .foregroundColor(self.isAnimating ? Color.likeColor : Color.likeOverlay)
+                sun.foregroundColor(self.isAnimating ? Color.yellow : Color.likeOverlay).glow()
+                Text("Long Press this circle")
+                    .foregroundColor(self.isAnimating ? .black : .white)
             }
-            .frame(width: 250, height: 250)
-            .offset(x: -200, y: -80)
+            .frame(width: 300, height: 300)
         }
         .onLongPressGesture {
             if (!floatLike) {
+                sun.frame(width: 300, height: 300)
                 self.floatLike.toggle()
                 self.isAnimating.toggle()
                 Timer.scheduledTimer(withTimeInterval: animationDuration, repeats: true) { _ in
@@ -53,6 +57,9 @@ struct JjaengJjaengView: View {
         .animation(.easeOut(duration: 2), value: isAnimating)
     }
 }
+
+
+
 
 struct JjaengJjaengView_Previews: PreviewProvider {
     static var previews: some View {

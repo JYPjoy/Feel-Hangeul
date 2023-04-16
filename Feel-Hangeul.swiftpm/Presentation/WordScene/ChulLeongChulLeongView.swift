@@ -21,13 +21,16 @@ struct ChulLeongChulLeongView: View {
                     HStack(spacing: 10) {
                         ForEach(0..<letters.count) { num in
                             Circle()
-                                .foregroundColor(enabled ? .c2 : .c3)
+                            .foregroundColor(enabled ? .c2 : .c3)
+                            //                                .fill(enabled ? LinearGradient(gradient: Gradient(colors: [.blue, .purple]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                            
+                            
                                 .overlay{
                                     Text(String(letters[num]))
                                         .padding(5)
                                         .font(.system(size: 50, weight: .heavy, design: .serif))
                                 }
-                                
+                            
                                 .offset(dragAmount)
                                 .animation(.interpolatingSpring(stiffness: 170, damping: 5).delay(Double(num) / 20), value: dragAmount)
                         }

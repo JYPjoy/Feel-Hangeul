@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Color {
     
-    // MARK: JuRukJuRukView
+    // MARK: JuRukJuRukView(rain)
     /// #00FDFF
     static let r1 = Color(#colorLiteral(red: 0, green: 0.9921568627, blue: 1, alpha: 1))
     
@@ -19,7 +19,7 @@ extension Color {
     /// #41464D
     static let r3 = Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
     
-    // MARK: ChulleongChulleong
+    // MARK: ChulleongChulleong(water)
     /// #135589
     static let c1 = Color(#colorLiteral(red: 0.07290045172, green: 0.4128472507, blue: 0.6077452302, alpha: 1))
     
@@ -30,9 +30,7 @@ extension Color {
     static let c3 = Color(#colorLiteral(red: 0.01568627451, green: 0.8980392157, blue: 0.7450980392, alpha: 1))
     
     // MARK: JjaengJjaeng
-    static let j1 = Color(#colorLiteral(red: 0.9960784314, green: 0.5490196078, blue: 0.3921568627, alpha: 1))
-
-    static let likeBackground = Color(#colorLiteral(red: 0.1921568627, green: 0.1098039216, blue: 0.3058823529, alpha: 1))
+    //static let j1 = Color(#colorLiteral(red: 0.9960784314, green: 0.5490196078, blue: 0.3921568627, alpha: 1))
     static let likeOverlay = Color(#colorLiteral(red: 0.2509803922, green: 0.1921568627, blue: 0.3215686275, alpha: 1))
     static let likeColor = Color(#colorLiteral(red: 0.9960784314, green: 0.5490196078, blue: 0.3921568627, alpha: 1))
 }
