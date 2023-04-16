@@ -17,7 +17,7 @@ struct ChulLeongChulLeongView: View {
             Color(UIColor.black)
                 .ignoresSafeArea()
             VStack(spacing: 15){
-                Text("Drag any circles")
+                Text("Drag any circle below")
                     .padding()
                     .background(.black)
                     .font(.system(size: 50, weight: .regular))
