@@ -10,6 +10,8 @@ import SwiftUI
 enum Destination{
     case content
     case content2
+    case onboarding
+    case main
     case jurukjuruk
     case chulleongchulleong
     case jjaengjjaeng
@@ -22,6 +24,10 @@ enum Destination{
             ContentView()
         case .content2:
             ContentView2()
+        case .onboarding:
+            OnboardingView()
+        case .main:
+            MainView()
         case .jurukjuruk:
             JuRukJuRukView()
         case .chulleongchulleong:

@@ -24,3 +24,11 @@ struct Glow: ViewModifier{
         }
     }
 }
+
+struct FittingFontSizeModifier: ViewModifier {
+  func body(content: Content) -> some View {
+    content
+      .font(.system(size: 50))
+      .minimumScaleFactor(0.001)
+  }
+}

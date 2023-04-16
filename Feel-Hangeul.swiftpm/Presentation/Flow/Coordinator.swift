@@ -13,7 +13,7 @@ fileprivate extension Notification.Name {
 }
 
 final class Coordinator: ObservableObject {
-    private var destination: Destination = .content
+    private var destination: Destination = .onboarding
     private let isRoot: Bool
     private var cancellable: Set<AnyCancellable> = []
     @Published private var navigationTrigger = false
@@ -35,7 +35,6 @@ final class Coordinator: ObservableObject {
     func navigationLinkSection() -> some View {
         NavigationLink(isActive: Binding<Bool>(get: getTrigger, set: setTrigger(newValue:))) {
             destination.view
-            //.navigationBarBackButtonHidden(true)
         } label: {
             EmptyView()
         }
