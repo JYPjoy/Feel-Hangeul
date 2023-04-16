@@ -123,6 +123,8 @@ struct ChulLeongChulLeongView: View {
                 .foregroundColor(.white)
             
 //            wordView(word: "출렁출렁", meaning: "[Chul-Leong-Chul-Leong]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example1: "ex> It has been raining 주룩주룩 all through the night.", example2: "ex> It has been raining 주룩주룩 all through the night.") //TODO: 해당 단어만 attributed text로 따로 굵기, 색상 다르게 하면 좋을 듯
+//                .background(.black)
+                
         }
 
     }
