@@ -28,26 +28,23 @@ struct Heart: View {
             .frame(width: 500, height: 500)
             .onTapGesture {
                 print("hi")
-//                Text("두근")
-//                    .font(.largeTitle)
-//                    .foregroundColor(.red)
-//                    .scaleEffect(scales[phase])
-//                    .animation(.spring(response: 0.10,
-//                                       dampingFraction: 0.24,
-//                                       blendDuration: 0.2),
-//                               value: phase)
-//                    .onChange(of: date) { _ in
-//                        advanceAnimationPhase()
-//                    }
-//                    .onAppear {
-//                        advanceAnimationPhase()
-//                    }
+                
             }
-        
-        
-        
         HStack {
-            
+            Text("두근")
+                .font(.largeTitle)
+                .foregroundColor(.red)
+                .scaleEffect(scales[phase])
+                .animation(.spring(response: 0.10,
+                                   dampingFraction: 0.24,
+                                   blendDuration: 0.2),
+                           value: phase)
+                .onChange(of: date) { _ in
+                    advanceAnimationPhase()
+                }
+                .onAppear {
+                    advanceAnimationPhase()
+                }
 
         }
     }

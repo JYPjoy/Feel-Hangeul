@@ -24,8 +24,8 @@ struct ShrinkingCapsule: View {
                 .fill(.clear)
                 .overlay(
                     VStack{
-                        Text("쨍").foregroundColor(.j1).font(.system(size: 60)).glow()
-                        Text("쨍").foregroundColor(.j2).font(.system(size: 55)).glow()
+                        Text("쨍").foregroundColor(.j1).font(.system(size: 50)).glow()
+                        Text("쨍").foregroundColor(.j2).font(.system(size: 50)).glow()
                         Text("쨍").foregroundColor(.j3).font(.system(size: 50)).glow()
                         Text("쨍").foregroundColor(.j4).font(.system(size: 45)).glow()
                         Text("쨍").foregroundColor(.j5).font(.system(size: 40)).glow()

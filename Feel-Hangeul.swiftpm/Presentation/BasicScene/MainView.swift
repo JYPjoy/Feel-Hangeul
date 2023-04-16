@@ -43,7 +43,7 @@ struct MainView: View {
             
             
             Button {
-                coordinator.push(destination: .dugeundugeun)
+               // coordinator.push(destination: .dugeundugeun)
             } label: {
                 Text("두근두근")
                     .foregroundColor(.green)
