@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct wordView: View {
+struct WordView: View {
     let word: String
     let meaning: String
     let explanation: String
@@ -49,7 +49,7 @@ struct wordView: View {
 
 struct wordView_Previews: PreviewProvider {
     static var previews: some View {
-        wordView(word: "주룩주룩", meaning: "Rainy", explanation: "설명", example1: "사용 예시1", example2: "사용 예시2")
+        WordView(word: "주룩주룩", meaning: "Rainy", explanation: "설명", example1: "사용 예시1", example2: "사용 예시2")
             .previewInterfaceOrientation(.landscapeLeft)
             .background(.black)
     }

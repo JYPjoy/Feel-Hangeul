@@ -17,7 +17,7 @@ struct JuRukJuRukView: View {
             TimelineView(.periodic(from: .now, by: 0.05)) { timeline in
                 JuRukJuRukCanvas(date: timeline.date)
             }
-            wordView(word: "주룩주룩", meaning: "[Ju-Ruk-Ju-Ruk]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example1: "- 애플 아카데미에서의 감정들", example2: "- It has been raining 주룩주룩 all thorugh the night.") //TODO: 해당 단어만 attributed text로 따로 굵기, 색상 다르게 하면 좋을 듯
+            WordView(word: "주룩주룩", meaning: "[Ju-Ruk-Ju-Ruk]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example1: "- 애플 아카데미에서의 감정들", example2: "- It has been raining 주룩주룩 all thorugh the night.") //TODO: 해당 단어만 attributed text로 따로 굵기, 색상 다르게 하면 좋을 듯
         }
     }
     
