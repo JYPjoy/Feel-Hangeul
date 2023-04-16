@@ -15,7 +15,6 @@ extension View {
 }
 
 struct Glow: ViewModifier{
-    @State private var animating = false
     func body(content: Content) -> some View {
         ZStack{
             content

@@ -35,7 +35,17 @@ struct MainView: View {
             Button {
                 coordinator.push(destination: .jjaengjjaeng)
             } label: {
-                Text("쨍쟁")
+                Text("쨍쨍")
+                    .foregroundColor(.green)
+                    .padding()
+                    .background(.red)
+            }
+            
+            
+            Button {
+                coordinator.push(destination: .dugeundugeun)
+            } label: {
+                Text("두근두근")
                     .foregroundColor(.green)
                     .padding()
                     .background(.red)
