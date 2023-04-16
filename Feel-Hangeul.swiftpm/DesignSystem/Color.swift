@@ -30,7 +30,17 @@ extension Color {
     static let c3 = Color(#colorLiteral(red: 0.01568627451, green: 0.8980392157, blue: 0.7450980392, alpha: 1))
     
     // MARK: JjaengJjaeng
-    //static let j1 = Color(#colorLiteral(red: 0.9960784314, green: 0.5490196078, blue: 0.3921568627, alpha: 1))
-    static let likeOverlay = Color(#colorLiteral(red: 0.2509803922, green: 0.1921568627, blue: 0.3215686275, alpha: 1))
-    static let likeColor = Color(#colorLiteral(red: 0.9960784314, green: 0.5490196078, blue: 0.3921568627, alpha: 1))
+    static let j1 = Color(#colorLiteral(red: 0.2509803922, green: 0.1921568627, blue: 0.3215686275, alpha: 1))
+    
+    static let j2 = Color(#colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1))
+    
+    static let j3 = Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1))
+    
+    static let j4 = Color(#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1))
+    
+    static let j5 = Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1))
+    
+    static let j6 = Color(#colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))
+    
+    static let j7 = Color(#colorLiteral(red: 0.8790463805, green: 0.9372785687, blue: 0.7853381634, alpha: 1))
 }

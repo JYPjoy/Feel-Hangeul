@@ -10,55 +10,56 @@ import SwiftUI
 struct JjaengJjaengView: View {
     // MARK:- variables
     let animationDuration: Double = 0.25
+    
     @State var isAnimating: Bool = false
     @State var shrinkIcon: Bool = false
     @State var floatLike: Bool = false
     @State var showFlare: Bool = false
     
-    var shining: some View {
-        ShiningView(isAnimating: $floatLike)
-            .offset(y: -130)
-            .animation(Animation.spring().delay(animationDuration / 2))
-    }
     var sun: some View {
         Circle()
     }
-
+    
     // MARK:- views
     var body: some View {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            ZStack(){
+            ZStack {
                 if (floatLike) {
-                    shining
+                    CapusuleGroupView(isAnimating: $floatLike)
+                        .offset(y: -130)
+                        .scaleEffect(self.showFlare ? 1.2 : 0.8)
+                        .opacity(self.floatLike ? 1 : 0)
+                        .animation(Animation.easeInOut(duration: 1).repeatForever())
                 }
-                sun.foregroundColor(self.isAnimating ? Color.yellow : Color.likeOverlay).glow()
+                sun.foregroundColor(self.isAnimating ? Color.red : Color.j1).glow()
                 Text("Long Press this circle")
                     .foregroundColor(self.isAnimating ? .black : .white)
-            }
-            .frame(width: 300, height: 300)
-        }
-        .onLongPressGesture {
+                
+            }.frame(width: 300, height: 300)
+                .scaleEffect(self.shrinkIcon ? 0.35 : 1)
+                .animation(Animation.spring(response: animationDuration, dampingFraction: 1, blendDuration: 1))
+                .offset(x: -200, y:0)
+            
+        }.onLongPressGesture {
             if (!floatLike) {
-                sun.frame(width: 300, height: 300)
                 self.floatLike.toggle()
                 self.isAnimating.toggle()
-                Timer.scheduledTimer(withTimeInterval: animationDuration, repeats: true) { _ in
+                self.shrinkIcon.toggle()
+                Timer.scheduledTimer(withTimeInterval: animationDuration, repeats: false) { _ in
                     self.shrinkIcon.toggle()
                     self.showFlare.toggle()
                 }
             } else {
                 self.isAnimating = false
+                self.shrinkIcon = false
                 self.showFlare = false
                 self.floatLike = false
             }
         }
-        .animation(.easeOut(duration: 2), value: isAnimating)
     }
 }
-
-
 
 
 struct JjaengJjaengView_Previews: PreviewProvider {
