@@ -11,42 +11,48 @@ struct MainView: View {
     @StateObject var coordinator = Coordinator()
     
     var body: some View {
-        ScrollView(.horizontal, showsIndicators : false){
-            HStack{
-                coordinator.navigationLinkSection()
-                Color.white.ignoresSafeArea(.all)
-                ForEach(wordCard.indices, id: \.self){ index in
-                    GeometryReader { geometry in
-                        Rectangle()
-                            .fill(wordCard[index].color)
-                            .cornerRadius(22)
-                            .overlay(
-                                Button(action: {
-                                    TTSManager.shared.speak(TTSManager.getAVSpeechUtterance(string:wordCard[index].word))
-                                    coordinator.push(destination: wordCard[index].destination)
-                                
-                                }){
-                                    VStack(){
-                                        HStack {
-                                            Text(wordCard[index].word)
-                                                .font(.system(size:60).bold())
-                                                .modifier(FittingFontSizeModifier())
+        ZStack{
+            //Color.white.ignoresSafeArea(.all)
+            Image("bgImage")
+                .resizable()
+                .ignoresSafeArea(.all)
+            ScrollView(.horizontal, showsIndicators : false){
+                HStack{
+                    coordinator.navigationLinkSection()
+             
+                    ForEach(wordCard.indices, id: \.self){ index in
+                        GeometryReader { geometry in
+                            Rectangle()
+                                .fill(wordCard[index].color)
+                                .cornerRadius(22)
+                                .overlay(
+                                    Button(action: {
+                                        TTSManager.shared.speak(TTSManager.getAVSpeechUtterance(string:wordCard[index].word))
+                                        coordinator.push(destination: wordCard[index].destination)
+                                        
+                                    }){
+                                        VStack(){
+                                            HStack {
+                                                Text(wordCard[index].word)
+                                                    .font(.system(size:60).bold())
+                                                    .modifier(FittingFontSizeModifier())
+                                            }
                                         }
+                                        .frame(width: (Const.width/3.5), height: (Const.width/3.5))
+                                        .foregroundColor(.white)
                                     }
-                                    .frame(width: (Const.width/3.5), height: (Const.width/3.5))
-                                    .foregroundColor(.white)
-                                }
-                            )
-                            .offset(x: -10, y: geometry.size.height / 3)
-                            .rotation3DEffect(.degrees(Double(geometry.frame(in: .global).minX / -10)), axis: (x: 0.0, y: 0, z: 1.0))
-                            .frame(width: (Const.width/3.5), height: (Const.width/3.5))
-                            .shadow(color: wordCard[index].color.opacity(0.7), radius: 20,x: 15,y:15)
+                                )
+                                .offset(x: -10, y: geometry.size.height / 3)
+                                .rotation3DEffect(.degrees(Double(geometry.frame(in: .global).minX / -10)), axis: (x: 0.0, y: 0, z: 1.0))
+                                .frame(width: (Const.width/3.5), height: (Const.width/3.5))
+                                .shadow(color: wordCard[index].color.opacity(0.7), radius: 20,x: 15,y:15)
+                        }
+                        .frame(width: 250.0, height: UIScreen.main.bounds.height)
                     }
-                    .frame(width: 250.0, height: UIScreen.main.bounds.height)
                 }
+                .padding(.leading, 120)
+                .padding(.trailing, 550)
             }
-            .padding(.leading, 120)
-            .padding(.trailing, 550)
         }
     }
 }
