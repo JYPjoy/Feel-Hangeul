@@ -29,13 +29,14 @@ struct JjaengJjaengView: View {
                 if (floatLike) {
                     CapusuleGroupView(isAnimating: $floatLike)
                         .offset(y: -130)
-                        .scaleEffect(self.showFlare ? 1.2 : 0.8)
+                        .scaleEffect(self.showFlare ? 1.2 : 1.0)
                         .opacity(self.floatLike ? 1 : 0)
                         .animation(Animation.easeInOut(duration: 1).repeatForever())
                 }
                 sun.foregroundColor(self.isAnimating ? Color.red : Color.j1).glow()
                 Text("Long Press this circle")
                     .foregroundColor(self.isAnimating ? .black : .white)
+                    .font(.system(size: 20))
                 
             }.frame(width: 300, height: 300)
                 .scaleEffect(self.shrinkIcon ? 0.35 : 1)

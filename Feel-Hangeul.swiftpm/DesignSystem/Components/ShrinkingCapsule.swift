@@ -33,7 +33,7 @@ struct ShrinkingCapsule: View {
                         Text("쨍").foregroundColor(.j7).font(.system(size: 30)).glow()
                         Text("쨍").foregroundColor(.j7).font(.system(size: 25)).glow()
                         Text("쨍").foregroundColor(.j7).font(.system(size: 20)).glow()
-                        Text("쨍").foregroundColor(.j7).font(.system(size: 15)).glow()
+                        Text("쨍").foregroundColor(.j7).font(.system(size: 18)).glow()
                     }
                 )
             
