@@ -58,6 +58,7 @@ struct MainView: View {
         
         ScrollView(.horizontal, showsIndicators : false){
             HStack{
+                Color.white.ignoresSafeArea(.all)
                 ForEach(WordCard.indices, id: \.self){ index in
                     GeometryReader { geomitry in
                         Rectangle()
@@ -68,26 +69,27 @@ struct MainView: View {
                                     //self.isNavigationActive = true
                                     //openViewName = FeelingCard[index]
                                     TTSManager.shared.speak(TTSManager.getAVSpeechUtterance(string:WordCard[index]))
+                                
                                 }){
                                     VStack(){
-                                        Spacer().frame(height:50)
+                                       // Spacer().frame(height:50)
                                         HStack {
-                                            Spacer().frame(width:50)
+                                       //     Spacer().frame(width:50)
                                             Text(WordCard[index])
-                                                .font(.system(size:100))
+                                                .font(.system(size:60).bold())
                                                 .modifier(FittingFontSizeModifier())
-                                            Spacer()
+                                            //Spacer()
                                         }
-                                        Spacer()
+                                       // Spacer()
                                     }
-                                    .frame(width: (Const.width/3)*1.5, height: (Const.width/3))
+                                    .frame(width: (Const.width/3.5), height: (Const.width/3.5))
                                     .foregroundColor(.white)
                                 }
                             )
-                            .offset(x: 20, y: geomitry.size.height / 3)
-                            .rotation3DEffect(.degrees(Double(geomitry.frame(in: .global).minX / -8)), axis: (x: 0.0, y: 0.0, z: 3.0))
+                            .offset(x: 40, y: geomitry.size.height / 2)
+                            .rotation3DEffect(.degrees(Double(geomitry.frame(in: .global).minX / -10)), axis: (x: 0.0, y: 0, z: 1.0))
 //
-                            .frame(width: (Const.width/3)*1.5, height: (Const.width/3))
+                            .frame(width: (Const.width/3.5), height: (Const.width/3.5))
                             .shadow(color:
                                         WordCardColor[WordCard[index]]!.opacity(0.7), radius: 20,x: 15,y:15)
                     }
