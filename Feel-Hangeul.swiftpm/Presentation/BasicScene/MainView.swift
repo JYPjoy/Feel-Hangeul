@@ -31,15 +31,18 @@ struct MainView: View {
                                         coordinator.push(destination: wordCard[index].destination)
                                         
                                     }){
-                                        VStack(){
-                                            HStack {
-                                                Text(wordCard[index].word)
-                                                    .font(.system(size:60).bold())
-                                                    .modifier(FittingFontSizeModifier())
-                                            }
+                                        VStack(spacing: 10){
+                                            Text(wordCard[index].word)
+                                                .font(.system(size:60).bold())
+                                                .modifier(FittingFontSizeModifier())
+                                            
+                                            Text(wordCard[index].pronunciation)
+                                                .font(.system(size: 25))
+                                                .modifier(FittingFontSizeModifier())
+                                            
                                         }
                                         .frame(width: (Const.width/3.5), height: (Const.width/3.5))
-                                        .foregroundColor(.white)
+                                        .foregroundColor(.black)
                                     }
                                 )
                                 .offset(x: -10, y: geometry.size.height / 3)
