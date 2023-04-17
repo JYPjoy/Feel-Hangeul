@@ -8,12 +8,7 @@
 import Foundation
 import SwiftUI
 
-extension View {
-    func glow() -> some View {
-        modifier(Glow())
-    }
-}
-
+/// 반짝이게 해줌 
 struct Glow: ViewModifier{
     func body(content: Content) -> some View {
         ZStack{
@@ -25,10 +20,18 @@ struct Glow: ViewModifier{
     }
 }
 
+/// 해당 View에 맞게 text 크기 조절
 struct FittingFontSizeModifier: ViewModifier {
   func body(content: Content) -> some View {
     content
       .font(.system(size: 50))
       .minimumScaleFactor(0.001)
   }
+}
+
+
+extension View {
+    func glow() -> some View {
+        modifier(Glow())
+    }
 }
