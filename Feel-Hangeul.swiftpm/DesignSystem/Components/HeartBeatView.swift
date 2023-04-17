@@ -40,11 +40,10 @@ struct HeartBeatView : View {
    // @State private var phase = 0
 
     //MARK:- Timer
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ZStack {
-            
             HeartShapeHeartBeat()
                 .stroke(lineWidth: 6) // changed from 8 to 6
                 .foregroundColor(Color.black.opacity(0.1))
@@ -55,7 +54,6 @@ struct HeartBeatView : View {
                 .foregroundColor(.red)
             
         }
-    
         .frame(height: 120) // changed from 300 to 120
         .animation(.spring())
         .onReceive(timer, perform: { _ in

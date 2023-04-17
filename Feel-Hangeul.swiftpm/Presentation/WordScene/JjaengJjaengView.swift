@@ -25,40 +25,55 @@ struct JjaengJjaengView: View {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            ZStack {
-                if (floatLike) {
-                    CapusuleGroupView(isAnimating: $floatLike)
-                        .offset(y: -130)
-                        .scaleEffect(self.showFlare ? 1.4 : 0.9)
-                        .opacity(self.floatLike ? 1 : 0)
-                        .animation(Animation.easeInOut(duration: 1).repeatForever())
+            HStack{
+                Spacer()
+                ZStack() {
+                    if (floatLike) {
+                        CapusuleGroupView(isAnimating: $floatLike)
+                            .offset(y: -130)
+                            .scaleEffect(self.showFlare ? 1.2 : 0.9)
+                            .opacity(self.floatLike ? 1 : 0)
+                            .animation(Animation.easeInOut(duration: 1).repeatForever())
+                    }
+                    sun.foregroundColor(self.isAnimating ? Color.red : Color.j1).glow()
+                    Text("Long Press this circle.")
+                        .foregroundColor(self.isAnimating ? .black : .white)
+                        .font(.system(size: 25))
+                    
                 }
-                sun.foregroundColor(self.isAnimating ? Color.red : Color.j1).glow()
-                Text("Long Press this circle.")
-                    .foregroundColor(self.isAnimating ? .black : .white)
-                    .font(.system(size: 25))
-                
-            }.frame(width: 300, height: 300)
+                .frame(width: 300, height: 300)
                 .scaleEffect(self.shrinkIcon ? 0.35 : 1)
                 .animation(Animation.spring(response: animationDuration, dampingFraction: 1, blendDuration: 1))
                 .offset(x: -200, y:0)
-            
-        }.onLongPressGesture {
-            if (!floatLike) {
-                self.floatLike.toggle()
-                self.isAnimating.toggle()
-                self.shrinkIcon.toggle()
-                Timer.scheduledTimer(withTimeInterval: animationDuration, repeats: false) { _ in
-                    self.shrinkIcon.toggle()
-                    self.showFlare.toggle()
+                .onLongPressGesture {
+                    if (!floatLike) {
+                        self.floatLike.toggle()
+                        self.isAnimating.toggle()
+                        self.shrinkIcon.toggle()
+                        Timer.scheduledTimer(withTimeInterval: animationDuration, repeats: false) { _ in
+                            self.shrinkIcon.toggle()
+                            self.showFlare.toggle()
+                        }
+                    } else {
+                        self.isAnimating = false
+                        self.shrinkIcon = false
+                        self.showFlare = false
+                        self.floatLike = false
+                    }
                 }
-            } else {
-                self.isAnimating = false
-                self.shrinkIcon = false
-                self.showFlare = false
-                self.floatLike = false
+                
+                VStack(){
+                    Spacer()
+                    WordView(word: "쨍쨍", meaning: "[Jjaeng-Jjaeng]", explanation: "주룩주룩 is a Korean mimetic word, \nwhich mimcs the sound of rain falling.", example1: "ex> It has been raining 주룩주룩 all through the night.", example2: "ex> It has been raining 주룩주룩 all through the night.")
+                        .padding()
+                }
             }
+            
+            
+ 
+            
         }
+        
     }
 }
 

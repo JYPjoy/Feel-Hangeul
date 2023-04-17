@@ -48,6 +48,7 @@ struct Heart: View {
                     .onAppear {
                         advanceAnimationPhase()
                         //TODO: 음원 추가
+                        //SoundManager.shared.playSound(formusicName: "heartbeat")
                     }
             }
 

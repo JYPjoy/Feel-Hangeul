@@ -8,8 +8,8 @@
 import SwiftUI
 import AVKit
 
-final class SoundSetting: ObservableObject {
-    static let instance = SoundSetting()
+final class SoundManager: ObservableObject {
+    static let shared = SoundManager()
     var normalPlayer: AVAudioPlayer?
     var backgroundPlayer: AVAudioPlayer?
     let speedControl = AVAudioUnitVarispeed()
@@ -37,11 +37,3 @@ final class SoundSetting: ObservableObject {
 
 }
 
-struct SoundEffectView: View {
-    
-    var soundSetting = SoundSetting()
-    
-    var body: some View {
-        Text("Hello, World!")
-    }
-}
