@@ -17,10 +17,10 @@ struct ChulLeongChulLeongView: View {
             Color(UIColor.black)
                 .ignoresSafeArea()
             VStack(spacing: 15){
-                Text("Drag any circle below")
+                Text("Drag any circle below.")
                     .padding()
                     .background(.black)
-                    .font(.system(size: 50, weight: .regular))
+                    .font(.system(size: 40, weight: .regular))
                     .foregroundColor(.white)
                 
                 VStack {
@@ -128,7 +128,7 @@ struct ChulLeongChulLeongView: View {
                         }
                 )
             }
-            
+            Spacer()
             Spacer()
 
             

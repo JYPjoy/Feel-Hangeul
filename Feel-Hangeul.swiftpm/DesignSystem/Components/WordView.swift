@@ -28,8 +28,10 @@ struct WordView: View {
                 Button {
                     TTSManager.shared.speak(TTSManager.getAVSpeechUtterance(string:word))
                 } label: {
-                    Text("TTS 버튼")
-                        .font(.system(size: 30, weight: .regular))
+                    Image(systemName: "headphones.circle")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                        
                 }
             }
             

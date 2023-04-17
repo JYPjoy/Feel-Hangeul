@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct JjaengJjaengView: View {
-    // MARK:- variables
-    let animationDuration: Double = 0.25
     
+    // MARK: - variables
+    let animationDuration: Double = 0.25
     @State var isAnimating: Bool = false
     @State var shrinkIcon: Bool = false
     @State var floatLike: Bool = false
@@ -20,7 +20,7 @@ struct JjaengJjaengView: View {
         Circle()
     }
     
-    // MARK:- views
+    // MARK: - views
     var body: some View {
         ZStack {
             Color.black
@@ -29,14 +29,14 @@ struct JjaengJjaengView: View {
                 if (floatLike) {
                     CapusuleGroupView(isAnimating: $floatLike)
                         .offset(y: -130)
-                        .scaleEffect(self.showFlare ? 1.2 : 1.0)
+                        .scaleEffect(self.showFlare ? 1.4 : 0.9)
                         .opacity(self.floatLike ? 1 : 0)
                         .animation(Animation.easeInOut(duration: 1).repeatForever())
                 }
                 sun.foregroundColor(self.isAnimating ? Color.red : Color.j1).glow()
-                Text("Long Press this circle")
+                Text("Long Press this circle.")
                     .foregroundColor(self.isAnimating ? .black : .white)
-                    .font(.system(size: 20))
+                    .font(.system(size: 25))
                 
             }.frame(width: 300, height: 300)
                 .scaleEffect(self.shrinkIcon ? 0.35 : 1)
