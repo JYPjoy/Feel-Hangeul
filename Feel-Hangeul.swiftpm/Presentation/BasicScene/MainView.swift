@@ -72,9 +72,7 @@ struct MainView: View {
                                 
                                 }){
                                     VStack(){
-                                       // Spacer().frame(height:50)
                                         HStack {
-                                       //     Spacer().frame(width:50)
                                             Text(WordCard[index])
                                                 .font(.system(size:60).bold())
                                                 .modifier(FittingFontSizeModifier())
@@ -86,9 +84,12 @@ struct MainView: View {
                                     .foregroundColor(.white)
                                 }
                             )
-                            .offset(x: 40, y: geomitry.size.height / 2)
+                            .offset(x: -10, y: geomitry.size.height / 3)
                             .rotation3DEffect(.degrees(Double(geomitry.frame(in: .global).minX / -10)), axis: (x: 0.0, y: 0, z: 1.0))
-//
+                        
+ 
+                          
+             
                             .frame(width: (Const.width/3.5), height: (Const.width/3.5))
                             .shadow(color:
                                         WordCardColor[WordCard[index]]!.opacity(0.7), radius: 20,x: 15,y:15)
