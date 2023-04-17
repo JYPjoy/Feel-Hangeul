@@ -16,6 +16,7 @@ enum Destination{
     case chulleongchulleong
     case jjaengjjaeng
     case dugeundugeun
+    case banjjakbanjjak
     
     @ViewBuilder
     var view: some View{
@@ -36,6 +37,8 @@ enum Destination{
             JjaengJjaengView()
         case .dugeundugeun:
             DugeunDugeunView()
+        case .banjjakbanjjak:
+            BanjjakbanjjakView()
         }
     }
 }

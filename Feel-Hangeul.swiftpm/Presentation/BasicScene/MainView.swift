@@ -19,7 +19,7 @@ struct MainView: View {
             ScrollView(.horizontal, showsIndicators : false){
                 HStack{
                     coordinator.navigationLinkSection()
-             
+                    
                     ForEach(wordCard.indices, id: \.self){ index in
                         GeometryReader { geometry in
                             Rectangle()
@@ -29,7 +29,6 @@ struct MainView: View {
                                     Button(action: {
                                         TTSManager.shared.speak(TTSManager.getAVSpeechUtterance(string:wordCard[index].word))
                                         coordinator.push(destination: wordCard[index].destination)
-                                        
                                     }){
                                         VStack(spacing: 10){
                                             Text(wordCard[index].word)
@@ -48,7 +47,7 @@ struct MainView: View {
                                 .offset(x: -10, y: geometry.size.height / 3)
                                 .rotation3DEffect(.degrees(Double(geometry.frame(in: .global).minX / -10)), axis: (x: 0.0, y: 0, z: 1.0))
                                 .frame(width: (Const.width/3.5), height: (Const.width/3.5))
-                                .shadow(color: wordCard[index].color.opacity(0.7), radius: 20,x: 15,y:15)
+                                .shadow(color: wordCard[index].color.opacity(0.7), radius: 20,x: 15, y:15)
                         }
                         .frame(width: 250.0, height: UIScreen.main.bounds.height)
                     }

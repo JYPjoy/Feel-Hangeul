@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WordView: View {
+struct DetailWordView: View {
     let word: String
     let meaning: String
     let explanation: String
@@ -17,7 +17,7 @@ struct WordView: View {
     var body: some View {
         VStack(spacing: 10){
             Text(word)
-                .font(.system(size: 100, weight: .bold))
+                .font(.system(size: 80, weight: .bold))
                 .padding()
                 .shadow(color: .r3, radius: 5)
             
@@ -51,7 +51,7 @@ struct WordView: View {
 
 struct wordView_Previews: PreviewProvider {
     static var previews: some View {
-        WordView(word: "주룩주룩", meaning: "Rainy", explanation: "설명", example1: "사용 예시1", example2: "사용 예시2")
+        DetailWordView(word: "주룩주룩", meaning: "Rainy", explanation: "설명", example1: "사용 예시1", example2: "사용 예시2")
             .previewInterfaceOrientation(.landscapeLeft)
             .background(.black)
     }

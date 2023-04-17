@@ -19,7 +19,6 @@ struct ShrinkingCapsule: View {
     
     var body: some View {
         ZStack {
-            
             Capsule(style: .continuous)
                 .fill(.clear)
                 .overlay(

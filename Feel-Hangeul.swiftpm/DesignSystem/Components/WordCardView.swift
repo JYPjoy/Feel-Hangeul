@@ -19,6 +19,6 @@ var wordCard = [
     wordCardView(word: "쨍쨍", pronunciation: "[Jjaeng-Jjaeng]", color: .orange, destination: .jjaengjjaeng),
     wordCardView(word: "출렁출렁", pronunciation: "[Chul-Leong-Chul-Leong]", color: .yellow, destination: .chulleongchulleong),
     wordCardView(word: "두근두근", pronunciation: "[Du-Geun-Du-Geun]", color: .green, destination: .dugeundugeun),
-    wordCardView(word: "반짝반짝",pronunciation: "[Ju-Ruk-Ju-Ruk]", color: .blue, destination: .jurukjuruk),
+    wordCardView(word: "반짝반짝",pronunciation: "[Ban-jjak-Ban-jjak]", color: .blue, destination: .banjjakbanjjak),
     wordCardView(word: "생글생글", pronunciation: "[Ju-Ruk-Ju-Ruk]", color: .purple, destination: .jurukjuruk)
 ]
