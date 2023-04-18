@@ -24,9 +24,9 @@ struct OnboardingView: View {
                 .opacity(0.8)
             
             VStack(spacing: 30){
-                Image("joy") //TODO: 로고가 와야 할 거 같음
+                Image("logo") //TODO: 로고가 와야 할 거 같음
                     .resizable()
-                    .frame(width: 160, height:160)
+                    .frame(width: 130, height:130)
                 
                 Text("Feel Hangeul")
                     .font(.system(size: 40, weight: .bold))

@@ -11,10 +11,10 @@ enum Destination{
     case onboarding
     case main
     case jurukjuruk
-    case chulleongchulleong
     case jjaengjjaeng
-    case dugeundugeun
     case banjjakbanjjak
+    case dugeundugeun
+    case chulleongchulleong
     case bangulbangul
     
     @ViewBuilder
@@ -26,14 +26,14 @@ enum Destination{
             MainView()
         case .jurukjuruk:
             JuRukJuRukView()
-        case .chulleongchulleong:
-            ChulLeongChulLeongView()
         case .jjaengjjaeng:
             JjaengJjaengView()
-        case .dugeundugeun:
-            DugeunDugeunView()
         case .banjjakbanjjak:
             BanjjakbanjjakView()
+        case .dugeundugeun:
+            DugeunDugeunView()
+        case .chulleongchulleong:
+            ChulLeongChulLeongView()
         case .bangulbangul:
             BangUlBangUlView()
         }
