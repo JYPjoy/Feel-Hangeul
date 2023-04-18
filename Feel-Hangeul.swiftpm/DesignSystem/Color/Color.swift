@@ -48,6 +48,6 @@ extension Color {
     
     
     // MARK: -BanjjakBanjjak
-    static let b1 = Color(#colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1))
+    static let b1 = Color(#colorLiteral(red: 0.8352941176, green: 0.6705882353, blue: 0.3333333333, alpha: 1))
     
 }
