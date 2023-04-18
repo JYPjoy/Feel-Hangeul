@@ -7,9 +7,12 @@
 
 import Foundation
 import SwiftUI
+import AVFoundation
 
+// MARK: - main화면
 struct DugeunDugeunView: View {
     @State var scale : CGFloat = 0.5
+    @State var audio : AVAudioPlayer!
     
     var body: some View {
         ZStack{
@@ -22,12 +25,23 @@ struct DugeunDugeunView: View {
                  }
             }
         }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now()+1){
+                let song = NSDataAsset (name: "dugeun")
+                self.audio = try! AVAudioPlayer(data: song!.data, fileTypeHint: "mp3")
+                self.audio.play()
+            }
+        }
+        .onDisappear {
+            self.audio.stop()
+        }
     }
 }
 
 
 struct Heart: View {
     @State private var phase = 0
+
     let scales: [CGFloat] = [1.0, 2.0, 3.0]
     let date: Date
     
@@ -47,8 +61,6 @@ struct Heart: View {
                 }
                 .onAppear {
                     advanceAnimationPhase()
-                    //TODO: 음원 추가
-                    //SoundManager.shared.playSound(formusicName: "heartbeat")
                 }
         }
     }

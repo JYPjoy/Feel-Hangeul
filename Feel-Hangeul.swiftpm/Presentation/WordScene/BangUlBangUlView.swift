@@ -37,6 +37,7 @@ struct BangUlBangUlView: View {
 /*
 - 색깔 바뀔 때 애니메이션 효과 추가하기 ☑️
 - 방울방울 글씨를 여기저기에 뿌리기 (Bubble처럼)
+ 클릭 시 커짐 
 - TapGesture 시 bubble이 나타나는 효과 추가하기☑️
  */
 
