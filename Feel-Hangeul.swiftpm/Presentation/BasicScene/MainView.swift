@@ -15,10 +15,9 @@ struct MainView: View {
             Image("bgImage")
                 .resizable()
                 .ignoresSafeArea(.all)
+            coordinator.navigationLinkSection()
             ScrollView(.horizontal, showsIndicators : false){
                 HStack{
-                    coordinator.navigationLinkSection()
-                    
                     ForEach(wordCard.indices, id: \.self){ index in
                         GeometryReader { geometry in
                             Rectangle()

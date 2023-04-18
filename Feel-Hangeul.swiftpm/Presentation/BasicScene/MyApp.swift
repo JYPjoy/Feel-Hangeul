@@ -4,13 +4,16 @@ import SwiftUI
 struct MyApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                //MainView()
-                OnboardingView()
+            if #available(iOS 16.0, *) {
+                NavigationStack {
+                    OnboardingView()
+                }
+            } else {
+                NavigationView {
+                    OnboardingView()
+                }
+                .navigationViewStyle(.stack)
             }
-            .navigationViewStyle(StackNavigationViewStyle())
-            .accentColor(.blue)
-     
         }
     }
 }
