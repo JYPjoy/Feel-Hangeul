@@ -12,7 +12,6 @@ struct MainView: View {
     
     var body: some View {
         ZStack{
-            //Color.white.ignoresSafeArea(.all)
             Image("bgImage")
                 .resizable()
                 .ignoresSafeArea(.all)

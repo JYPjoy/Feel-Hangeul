@@ -20,5 +20,5 @@ var wordCard = [
     wordCardView(word: "출렁출렁", pronunciation: "[Chul-Leong-Chul-Leong]", color: .yellow, destination: .chulleongchulleong),
     wordCardView(word: "두근두근", pronunciation: "[Du-Geun-Du-Geun]", color: .green, destination: .dugeundugeun),
     wordCardView(word: "반짝반짝",pronunciation: "[Ban-jjak-Ban-jjak]", color: .blue, destination: .banjjakbanjjak),
-    wordCardView(word: "생글생글", pronunciation: "[Ju-Ruk-Ju-Ruk]", color: .purple, destination: .jurukjuruk)
+    wordCardView(word: "생글생글", pronunciation: "[Ju-Ruk-Ju-Ruk]", color: .purple, destination: .jurukjuruk) //MARK: 빙글빙글로 바뀔 수도 있다는 거 염두해 두기
 ]

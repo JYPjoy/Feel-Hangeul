@@ -11,7 +11,7 @@ struct MyApp: App {
             NavigationView {
                 MainView()
                 //OnboardingView()
-                    
+                //BanjjakbanjjakView()
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .accentColor(.blue)
