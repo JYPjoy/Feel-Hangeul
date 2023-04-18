@@ -34,9 +34,8 @@ struct BanjjakbanjjakView: View {
                                alignment: .center)
                         .position(CGPoint(x: .random(in: 0...Const.width),y: .random(in:0...Const.height)))
                 }
-            }
-            DetailWordView(word: "반짝반짝", meaning: "[Ban-jjak-Ban-jjak]", explanation: "반짝반짝 is a Korean mimetic word, which mimcs the sound of rain falling.", example1: "- 애플 아카데미에서의 감정들", example2: "- It has been raining 주룩주룩 all thorugh the night.")
-                .glow()
+            }.glow()
+            DetailWordView(word: "반짝반짝", meaning: "[Ban-jjak-Ban-jjak]", explanation: "반짝반짝 is a Korean mimetic word, which mimcs the sound of rain falling.", example1: "- 애플 아카데미에서의 감정들", example2: "- It has been raining 주룩주룩 all thorugh the night.").glow()
         }
         .onAppear {
             self.scale = 1.2
