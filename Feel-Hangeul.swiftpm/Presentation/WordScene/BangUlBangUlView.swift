@@ -14,16 +14,17 @@ struct BangUlBangUlView: View {
         ZStack{
             Color.black
                 .ignoresSafeArea()
-            
-            Text("방울")
-                .font(.system(size: 100))
-                .foregroundColor(.white)
+
+            Circle()
+                .frame(width: 200, height:200)
+                .opacity(0.5)
+                .foregroundColor(bubble ? .yellow : .clear)
+                .animation(.easeOut(duration: 1), value: bubble)
                 .overlay{
-                    Circle()
-                        .frame(width: 200, height:200)
-                        .opacity(0.5)
-                        .foregroundColor(bubble ? .yellow : .clear)
-                        .animation(.easeOut(duration: 1), value: bubble)
+                    Text("방울")
+                        .font(.system(size: 100))
+                        .foregroundColor(.white)
+                    
                 }
                 .onTapGesture {
                     bubble.toggle()
