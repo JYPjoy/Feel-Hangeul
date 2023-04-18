@@ -35,9 +35,9 @@ struct OnboardingView: View {
                     .font(.system(size: 20, weight: .regular))
                 
                 HStack{
-                    Image("joy")
-                        .resizable()
-                        .frame(width: 100, height:100)
+//                    Image("joy")
+//                        .resizable()
+//                        .frame(width: 100, height:100)
                     
                     Text("sdddddddddddddddddddssssssssssss")
                         .font(.system(size: 15, weight: .regular))
