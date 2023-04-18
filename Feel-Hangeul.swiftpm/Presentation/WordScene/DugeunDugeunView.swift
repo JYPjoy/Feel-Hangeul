@@ -26,11 +26,10 @@ struct DugeunDugeunView: View {
             }
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now()+1){
-                let song = NSDataAsset (name: "dugeun")
-                self.audio = try! AVAudioPlayer(data: song!.data, fileTypeHint: "mp3")
-                self.audio.play()
-            }
+            let song = NSDataAsset (name: "dugeun")
+            self.audio = try! AVAudioPlayer(data: song!.data, fileTypeHint: "mp3")
+            self.audio.play()
+        
         }
         .onDisappear {
             self.audio.stop()
