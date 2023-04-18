@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ShrinkingCapsule: View {
-    
     // MARK:- variables
     let animationDuration: Double = 0.4
     let rotationAngle: Angle
@@ -35,7 +34,6 @@ struct ShrinkingCapsule: View {
                         Text("쨍").foregroundColor(.j7).font(.system(size: 18)).glow()
                     }
                 )
-            
                 .frame(width: 40, height: self.isAnimating ? 30 : 100, alignment: .bottomLeading) //15, 30:65
                 .rotationEffect(rotationAngle)
         }

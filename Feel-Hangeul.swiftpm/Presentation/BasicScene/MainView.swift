@@ -48,7 +48,7 @@ struct MainView: View {
                                 .frame(width: (Const.width/3.5), height: (Const.width/3.5))
                                 .shadow(color: wordCard[index].color.opacity(0.7), radius: 20,x: 15, y:15)
                         }
-                        .frame(width: 250.0, height: UIScreen.main.bounds.height)
+                        .frame(width: 250.0, height: Const.height)
                     }
                 }
                 .padding(.leading, 120)
