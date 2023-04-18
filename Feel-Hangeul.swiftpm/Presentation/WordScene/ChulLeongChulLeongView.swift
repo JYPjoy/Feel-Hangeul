@@ -59,7 +59,7 @@ struct ChulLeongChulLeongView: View {
                                 .offset(dragAmount)
                                 .animation(.interpolatingSpring(stiffness: 170, damping: 5).delay(Double(num) / 20), value: dragAmount)
                         }
-
+                        
                     }
                     
                     HStack(spacing: 10) {
@@ -76,7 +76,7 @@ struct ChulLeongChulLeongView: View {
                                 .offset(dragAmount)
                                 .animation(.interpolatingSpring(stiffness: 170, damping: 5).delay(Double(num) / 20), value: dragAmount)
                         }
-
+                        
                     }
                     HStack(spacing: 10) {
                         ForEach(0..<letters.count) { num in
@@ -92,7 +92,7 @@ struct ChulLeongChulLeongView: View {
                                 .offset(dragAmount)
                                 .animation(.interpolatingSpring(stiffness: 170, damping: 5).delay(Double(num) / 20), value: dragAmount)
                         }
-
+                        
                     }
                     
                 }
@@ -110,7 +110,6 @@ struct ChulLeongChulLeongView: View {
             }
             Spacer()
         }
-        
     }
 }
 

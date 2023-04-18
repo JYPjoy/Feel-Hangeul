@@ -69,11 +69,7 @@ struct JjaengJjaengView: View {
                 }
             }
             
-            
- 
-            
         }
-        
     }
 }
 

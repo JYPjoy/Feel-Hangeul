@@ -16,7 +16,6 @@ final class SoundManager: ObservableObject {
     
     func playSound(formusicName musicName: String) {
         guard let url = Bundle.main.url(forResource: musicName, withExtension: ".wav") else { return }
-        
         do {
             normalPlayer?.enableRate = true
             normalPlayer = try AVAudioPlayer(contentsOf: url)
