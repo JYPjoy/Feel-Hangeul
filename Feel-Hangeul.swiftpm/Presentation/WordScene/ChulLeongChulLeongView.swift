@@ -22,21 +22,22 @@ struct ChulLeongChulLeongView: View {
                 VStack {
                     DetailWordView(word: "출렁출렁", meaning: "[Chul-Leong-Chul-Leong]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example1: "ex> It has been raining 주룩주룩 all through the night.", example2: "ex> It has been raining 주룩주룩 all through the night.")
                     
-                    Text("Drag any circle below.")
+                    Text("Drag any Text below.")
                         .padding()
                         .background(.black)
-                        .font(.system(size: 40, weight: .regular))
+                        .font(.system(size: 35, weight: .regular))
                         .foregroundColor(.white)
                         .modifier(FittingFontSizeModifier())
                     
                     HStack(spacing: 10) {
                         ForEach(0..<letters.count) { num in
                             Circle()
-                                .foregroundColor(enabled ? .c2 : .c3)
+                                .foregroundColor(.clear)
                                 .overlay{
                                     Text(String(letters[num]))
                                         .padding(5)
                                         .font(.system(size: 48, weight: .heavy))
+                                        .foregroundColor(enabled ? .c2 : .c3)
                                         .modifier(FittingFontSizeModifier())
                                 }
                                 .offset(dragAmount)
@@ -47,46 +48,51 @@ struct ChulLeongChulLeongView: View {
                     HStack(spacing: 10) {
                         ForEach(0..<letters.count) { num in
                             Circle()
-                                .foregroundColor(enabled ? .c2 : .c3)
+                                .foregroundColor(.clear)
                                 .overlay{
                                     Text(String(letters[num]))
                                         .padding(5)
                                         .font(.system(size: 48, weight: .heavy))
+                                        .foregroundColor(enabled ? .c2 : .c3)
                                         .modifier(FittingFontSizeModifier())
                                 }
                                 .offset(dragAmount)
                                 .animation(.interpolatingSpring(stiffness: 170, damping: 5).delay(Double(num) / 20), value: dragAmount)
                         }
+
                     }
                     
                     HStack(spacing: 10) {
                         ForEach(0..<letters.count) { num in
                             Circle()
-                                .foregroundColor(enabled ? .c2 : .c3)
+                                .foregroundColor(.clear)
                                 .overlay{
                                     Text(String(letters[num]))
                                         .padding(5)
                                         .font(.system(size: 48, weight: .heavy))
+                                        .foregroundColor(enabled ? .c2 : .c3)
                                         .modifier(FittingFontSizeModifier())
-                                    
                                 }
                                 .offset(dragAmount)
                                 .animation(.interpolatingSpring(stiffness: 170, damping: 5).delay(Double(num) / 20), value: dragAmount)
                         }
+
                     }
                     HStack(spacing: 10) {
                         ForEach(0..<letters.count) { num in
                             Circle()
-                                .foregroundColor(enabled ? .c2 : .c3)
+                                .foregroundColor(.clear)
                                 .overlay{
                                     Text(String(letters[num]))
                                         .padding(5)
                                         .font(.system(size: 48, weight: .heavy))
+                                        .foregroundColor(enabled ? .c2 : .c3)
                                         .modifier(FittingFontSizeModifier())
                                 }
                                 .offset(dragAmount)
                                 .animation(.interpolatingSpring(stiffness: 170, damping: 5).delay(Double(num) / 20), value: dragAmount)
                         }
+
                     }
                     
                 }
