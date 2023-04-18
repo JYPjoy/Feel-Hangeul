@@ -8,8 +8,6 @@
 import SwiftUI
 
 enum Destination{
-    case content
-    case content2
     case onboarding
     case main
     case jurukjuruk
@@ -22,10 +20,6 @@ enum Destination{
     @ViewBuilder
     var view: some View{
         switch self{
-        case .content:
-            ContentView()
-        case .content2:
-            ContentView2()
         case .onboarding:
             OnboardingView()
         case .main:

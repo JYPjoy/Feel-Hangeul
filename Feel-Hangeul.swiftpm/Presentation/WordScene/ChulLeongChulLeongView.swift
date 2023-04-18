@@ -22,7 +22,7 @@ struct ChulLeongChulLeongView: View {
                 VStack {
                     DetailWordView(word: "출렁출렁", meaning: "[Chul-Leong-Chul-Leong]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example1: "ex> It has been raining 주룩주룩 all through the night.", example2: "ex> It has been raining 주룩주룩 all through the night.")
                     
-                    Text("Drag any Text below.")
+                    Text("Drag any character below.")
                         .padding()
                         .background(.black)
                         .font(.system(size: 35, weight: .regular))
