@@ -1,6 +1,5 @@
 //
 //  SwiftUIView.swift
-//  
 //
 //  Created by Joy on 2023/04/18.
 // TODO: 반짝, scaleEffect, 글자들로 별 모양 만들어도 괜찮을 듯
@@ -37,7 +36,7 @@ struct BanjjakbanjjakView: View {
                         .position(CGPoint(x: .random(in: 0...Const.width),y: .random(in:0...Const.height)))
                 }
             }.glow()
-            DetailWordView(word: "반짝반짝", meaning: "[Ban-jjak-Ban-jjak]", explanation: "반짝반짝 is a Korean mimetic word, which mimcs the sound of rain falling.", example: "- 애플 아카데미에서의 감정들").glow()
+            DetailWordView(word: "반짝반짝", meaning: "[Ban-jjak-Ban-jjak]", explanation: "▶︎ \"반짝반짝\" means twinkling, sparking", example: "▶︎ In Mauna Kea, you can see stars 반짝반짝.").glow()
         }
         .onAppear {
             self.scale = 1.2
