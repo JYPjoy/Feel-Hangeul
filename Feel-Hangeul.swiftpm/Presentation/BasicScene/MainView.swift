@@ -77,18 +77,6 @@ struct MainView: View {
             } label: {
             }
           }
-          ToolbarItem(placement: .navigationBarTrailing) {
-            Button {
-              coordinator.push(destination: .main)
-            } label: {
-            }
-          }
-          ToolbarItem(placement: .navigationBarTrailing) {
-            Button {
-              coordinator.push(destination: .main)
-            } label: {
-            }
-          }
         }
     }
 }

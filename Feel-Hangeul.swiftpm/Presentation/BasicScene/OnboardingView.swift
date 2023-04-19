@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @StateObject var coordinator = Coordinator()
+    @StateObject var coordinator = Coordinator(isRoot: true)
     
     var body: some View {
         ZStack{
