@@ -23,24 +23,38 @@ struct OnboardingView: View {
                 .foregroundColor(.white)
                 .opacity(0.8)
             
-            VStack(spacing: 30){
+            VStack(spacing: 23){
+    
                 Image("logo") //TODO: 로고가 와야 할 거 같음
                     .resizable()
-                    .frame(width: 130, height:130)
-                
+                    .frame(width: 150, height:150)
                 Text("Feel Hangeul")
-                    .font(.system(size: 40, weight: .bold))
+                    .font(.system(size: 50, weight: .bold))
                 
-                Text("설명설명")
-                    .font(.system(size: 20, weight: .regular))
-                
-                HStack{
-//                    Image("joy")
-//                        .resizable()
-//                        .frame(width: 100, height:100)
+                VStack(spacing: 5) {
+                    Text("This App is about Onomatopoeia, Mimetic words of Hanguel.")
+                        .font(.system(size: 25, weight: .regular))
+
+                    Text("I hope everybody \"Feel Hanguel\" through this app.")
+                        .font(.system(size: 25, weight: .regular))
                     
-                    Text("sdddddddddddddddddddssssssssssss")
-                        .font(.system(size: 15, weight: .regular))
+                    Text("All you need is iPad!")
+                        .font(.system(size: 25, weight: .regular))
+                    
+                    Text("Are you ready to start? Then, Let’s get started!")
+                        .font(.system(size: 25, weight: .regular))
+      
+                }
+
+                HStack{
+                    Image("smartphone")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                    
+                    Text("Please Preview this on iPad device 12.9 in LandscapeLeft orientation.\n THANK YOU👍")
+                        .font(.system(size: 23, weight: .bold))
+                        .foregroundColor(.red)
+         
                 }
                 
                 Button{
@@ -59,7 +73,7 @@ struct OnboardingView: View {
         }
     }
 }
-
+//
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingView()
