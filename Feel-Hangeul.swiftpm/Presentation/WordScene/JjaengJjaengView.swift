@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct JjaengJjaengView: View {
-    
+    @StateObject var coordinator = Coordinator()
     // MARK: - variables
     let animationDuration: Double = 0.25
     @State var isAnimating: Bool = false
@@ -23,6 +23,7 @@ struct JjaengJjaengView: View {
     // MARK: - views
     var body: some View {
         ZStack {
+            coordinator.navigationLinkSection()
             Color.black
                 .edgesIgnoringSafeArea(.all)
             HStack{
@@ -69,6 +70,14 @@ struct JjaengJjaengView: View {
                 }
             }
             
+        }
+        .toolbar {
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Button {
+              coordinator.push(destination: .main)
+            } label: {
+            }
+          }
         }
     }
 }

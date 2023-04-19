@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct BanjjakbanjjakView: View {
+    @StateObject var coordinator = Coordinator()
     @State var scale : CGFloat = 0.5
     @State private var value = 1.0
         private let letters = Array("반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝")
     
     var body: some View {
         ZStack {
+            coordinator.navigationLinkSection()
             Color(UIColor.black)
                 .ignoresSafeArea()
             
@@ -39,6 +41,14 @@ struct BanjjakbanjjakView: View {
         }
         .onAppear {
             self.scale = 1.2
+        }
+        .toolbar {
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Button {
+              coordinator.push(destination: .main)
+            } label: {
+            }
+          }
         }
     }
 }

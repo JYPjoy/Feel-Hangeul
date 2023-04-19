@@ -12,10 +12,10 @@ struct MainView: View {
     
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Image("bgImage")
                 .resizable()
                 .ignoresSafeArea(.all)
-            coordinator.navigationLinkSection()
             ScrollView(.horizontal, showsIndicators : false){
                 HStack{
                     ForEach(wordCard.indices, id: \.self){ index in
@@ -53,6 +53,26 @@ struct MainView: View {
                 .padding(.leading, 120)
                 .padding(.trailing, 550)
             }
+        }
+        .toolbar {
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Button {
+              coordinator.push(destination: .main)
+            } label: {
+            }
+          }
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Button {
+              coordinator.push(destination: .main)
+            } label: {
+            }
+          }
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Button {
+              coordinator.push(destination: .main)
+            } label: {
+            }
+          }
         }
     }
 }

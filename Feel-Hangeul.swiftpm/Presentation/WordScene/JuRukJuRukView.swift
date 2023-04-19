@@ -8,16 +8,24 @@
 import SwiftUI
 
 struct JuRukJuRukView: View {
-
-    
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Color.black
                 .edgesIgnoringSafeArea(.all)
             TimelineView(.periodic(from: .now, by: 0.05)) { timeline in
                 JuRukJuRukCanvas(date: timeline.date)
             }
             DetailWordView(word: "주룩주룩", meaning: "[Ju-Ruk-Ju-Ruk]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example: "- 애플 아카데미에서의 감정들")
+        }
+        .toolbar {
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Button {
+              coordinator.push(destination: .main)
+            } label: {
+            }
+          }
         }
     }
     

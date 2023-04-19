@@ -9,9 +9,11 @@ import SwiftUI
 
 struct BangUlBangUlView: View {
     @State private var bubble = false
+    @StateObject var coordinator = Coordinator()
     
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Color.black
                 .ignoresSafeArea()
 
@@ -29,6 +31,14 @@ struct BangUlBangUlView: View {
                 .onTapGesture {
                     bubble.toggle()
                 }
+        }
+        .toolbar {
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Button {
+              coordinator.push(destination: .main)
+            } label: {
+            }
+          }
         }
     }
 }

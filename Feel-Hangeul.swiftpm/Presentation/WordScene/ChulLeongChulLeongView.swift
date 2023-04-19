@@ -11,12 +11,14 @@ import SwiftUI
 struct ChulLeongChulLeongView: View {
     let letters = Array("출렁출렁출렁출렁출렁출렁출렁")
     
+    @StateObject var coordinator = Coordinator()
     @State private var enabled = false
     @State private var dragAmount = CGSize.zero
     
     var body: some View {
         //ScrollView(.vertical, showsIndicators : false)
         ZStack{
+            coordinator.navigationLinkSection()
             Color(UIColor.black)
                 .ignoresSafeArea()
             VStack(){
@@ -112,6 +114,14 @@ struct ChulLeongChulLeongView: View {
                 )
             }
             Spacer()
+        }
+        .toolbar {
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Button {
+              coordinator.push(destination: .main)
+            } label: {
+            }
+          }
         }
     }
 }

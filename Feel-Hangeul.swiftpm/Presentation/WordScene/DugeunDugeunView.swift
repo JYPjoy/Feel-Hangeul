@@ -11,11 +11,13 @@ import AVFoundation
 
 // MARK: - main화면
 struct DugeunDugeunView: View {
+    @StateObject var coordinator = Coordinator()
     @State var scale : CGFloat = 0.5
     @State var audio : AVAudioPlayer!
     
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Color(.black)
                 .ignoresSafeArea(.all)
             VStack(){
@@ -37,6 +39,14 @@ struct DugeunDugeunView: View {
         }
         .onDisappear {
             self.audio.stop()
+        }
+        .toolbar {
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Button {
+              coordinator.push(destination: .main)
+            } label: {
+            }
+          }
         }
     }
 }
