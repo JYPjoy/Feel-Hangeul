@@ -9,16 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
   var body: some View {
-      if #available(iOS 16.0, *) {
-          NavigationStack {
-              OnboardingView()
-          }
-      } else {
-          NavigationView {
-              OnboardingView()
-          }
-          .navigationViewStyle(.stack)
-      }
+      MatrixRainView()
+//      if #available(iOS 16.0, *) {
+//          NavigationStack {
+//             // OnboardingView()
+//              MatrixRainView()
+//          }
+//      } else {
+//          NavigationView {
+//              OnboardingView()
+//              MatrixRainView()
+//          }
+//          .navigationViewStyle(.stack)
+//      }
   }
 }
 
