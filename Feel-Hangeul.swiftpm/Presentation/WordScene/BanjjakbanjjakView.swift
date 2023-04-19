@@ -26,21 +26,21 @@ struct BanjjakbanjjakView: View {
                         .overlay(
                             Text(String(letters[num]))
                                 .font(.system(size: 18))
-                                .foregroundColor([.b1, .b2,].randomElement())
+                                .foregroundColor([.b1, .b2, .b3, .b4, .b5, .b6, .b7].randomElement())
                         )
                         .opacity(value)
-                        //.animation(Animation.linear(duration:1.2).repeatForever(autoreverses: true), value: show)
+                        .animation(Animation.linear(duration:1.2).repeatForever(autoreverses: true), value: show)
                         .onAppear { self.value = 0 }
-                        //.scaleEffect(self.scale * .random(in: 1...2.5))
+                        .scaleEffect(self.scale * .random(in: 1...2.5))
                         .frame(width: .random(in: 1...100),
                                height: CGFloat.random (in:20...100),
                                alignment: .center)
                         .position(CGPoint(x: .random(in: 0...Const.width),y: .random(in:0...Const.height)))
                 }
             }.glow()
-            DetailWordView(word: "반짝반짝", meaning: "[Ban-jjak-Ban-jjak]", explanation: "▶︎ (ex) \"반짝반짝\" means twinkling, sparking", example: "▶︎ In Mauna Kea, you can see stars shining 반짝반짝 in the sky.").glow()
+            DetailWordView(word: "반짝반짝", meaning: "[Ban-jjak-Ban-jjak]", explanation: "▶︎ \"반짝반짝\" means twinkling, sparking.", example: "▶︎ In Mauna Kea, you can see stars shining 반짝반짝 in the sky.").glow()
         }
-        .onTapGesture {
+        .onAppear {
             self.scale = 1.2
             show.toggle()
         }
