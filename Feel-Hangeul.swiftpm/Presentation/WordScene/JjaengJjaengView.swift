@@ -15,6 +15,7 @@ struct JjaengJjaengView: View {
     @State var shrinkIcon: Bool = false
     @State var floatLike: Bool = false
     @State var showFlare: Bool = false
+    @State var show: Bool = false
     
     var sun: some View {
         Circle()
@@ -26,13 +27,12 @@ struct JjaengJjaengView: View {
             coordinator.navigationLinkSection()
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            HStack{
-                Spacer()
+            HStack(spacing: 120){
                 ZStack() {
                     if (floatLike) {
                         CapusuleGroupView(isAnimating: $floatLike)
                             .offset(y: -130)
-                            .scaleEffect(self.showFlare ? 1.2 : 0.9)
+                            .scaleEffect(self.showFlare ? 1.1 : 0.9)
                             .opacity(self.floatLike ? 1 : 0)
                             .animation(Animation.easeInOut(duration: 1).repeatForever())
                     }
@@ -46,7 +46,6 @@ struct JjaengJjaengView: View {
                 .frame(width: 300, height: 300)
                 .scaleEffect(self.shrinkIcon ? 0.35 : 1)
                 .animation(Animation.spring(response: animationDuration, dampingFraction: 1, blendDuration: 1))
-                .offset(x: -150, y:0)
                 .onLongPressGesture(minimumDuration: 0.2) {
                     if (!floatLike) {
                         self.floatLike.toggle()
@@ -63,23 +62,23 @@ struct JjaengJjaengView: View {
                         self.floatLike = false
                     }
                 }
-                
-                
-                VStack(){
+                VStack {
                     Spacer()
-                    DetailWordView(word: "쨍쨍", meaning: "[Jjaeng-Jjaeng]", explanation: "주룩주룩 is a Korean mimetic word, \nwhich mimcs the sound of rain falling.", example: "ex> It has been raining 주룩주룩 all through the night.")
+                    Spacer()
+                    DetailWordView(word: "쨍쨍", meaning: "[Jjaeng-Jjaeng]", explanation: "▶︎ \"쨍쨍\"is a Korean mimic word, used to describe\n the sun is blazing down intensely.", example: "▶︎ (ex) These days Texas's weather is so nice \nand sunny. The sun is blazing down 쨍쨍 on us.")
                         .padding()
+                    Spacer()
                 }
+                
             }
-            
         }
         .toolbar {
-          ToolbarItem(placement: .navigationBarTrailing) {
-            Button {
-              coordinator.push(destination: .main)
-            } label: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    coordinator.push(destination: .main)
+                } label: {
+                }
             }
-          }
         }
     }
 }
