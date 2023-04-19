@@ -24,7 +24,7 @@ struct ChulLeongChulLeongView: View {
             VStack(){
                 VStack {
                     Spacer()
-                    DetailWordView(word: "출렁출렁", meaning: "[Chul-Leong-Chul-Leong]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example: "ex> It has been raining 주룩주룩 all through the night.")
+                    DetailWordView(word: "출렁출렁", meaning: "[Chul-Leong-Chul-Leong]", explanation: "▶︎ \"출렁출렁\" describes the waves form big ripples repeatedly.", example: "▶︎ (ex) The sea water is swaying 출렁출렁.")
                     Spacer()
                     Text("Drag any character below.")
                         .padding()
