@@ -10,6 +10,8 @@ struct BanjjakbanjjakView: View {
     @StateObject var coordinator = Coordinator()
     @State var scale : CGFloat = 0.5
     @State private var value = 1.0
+    @State var show = false
+    
         private let letters = Array("반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝반짝")
     
     var body: some View {
@@ -27,7 +29,7 @@ struct BanjjakbanjjakView: View {
                                 .foregroundColor([.b1, .b2, .b3, .b4, .b5, .b6, .b7].randomElement())
                         )
                         .opacity(value)
-                        .animation(Animation.linear(duration: 1.2).repeatForever(autoreverses: true))
+                        .animation(Animation.linear(duration:1.2).repeatForever(autoreverses: true), value: show)
                         .onAppear { self.value = 0 }
                         .scaleEffect(self.scale * .random(in: 1...2.5))
                         .frame(width: .random(in: 1...100),
@@ -40,6 +42,7 @@ struct BanjjakbanjjakView: View {
         }
         .onAppear {
             self.scale = 1.2
+            show.toggle()
         }
         .toolbar {
           ToolbarItem(placement: .navigationBarTrailing) {
