@@ -24,7 +24,7 @@ struct ChulLeongChulLeongView: View {
             VStack(){
                 VStack {
                     Spacer()
-                    DetailWordView(word: "출렁출렁", meaning: "[Chul-Leong-Chul-Leong]", explanation: "▶︎ \"출렁출렁\" describes the waves form big ripples repeatedly.", example: "▶︎ (ex) The sea water is swaying 출렁출렁.")
+                    DetailWordView(word: "출렁출렁", meaning: "[Chul-Leong-Chul-Leong]", explanation: "▶︎ \"출렁출렁\" is a word describing the waves form big ripples repeatedly.", example: "▶︎ (ex) In Santa Monica Beach, you can see sea water is swaying 출렁출렁.")
                     Spacer()
                     Text("Drag any character below.")
                         .padding()
