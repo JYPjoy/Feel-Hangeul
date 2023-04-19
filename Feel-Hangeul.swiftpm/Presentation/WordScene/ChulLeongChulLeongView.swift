@@ -10,6 +10,7 @@ import SwiftUI
 // TODO: iPHONE에서 밑에 잘려 보이는 문제 해결해야 함
 struct ChulLeongChulLeongView: View {
     let letters = Array("출렁출렁출렁출렁출렁출렁출렁")
+    
     @State private var enabled = false
     @State private var dragAmount = CGSize.zero
     
@@ -31,7 +32,7 @@ struct ChulLeongChulLeongView: View {
                         .modifier(FittingFontSizeModifier())
                     Spacer()
                     HStack() {
-                        ForEach(0..<letters.count) { num in
+                        ForEach(0..<letters.count, id: \.self) { num in
                             Circle()
                                 .foregroundColor(.clear)
                                 .frame(width: 68, height: 68)
@@ -48,7 +49,7 @@ struct ChulLeongChulLeongView: View {
                     }
                     
                     HStack() {
-                        ForEach(0..<letters.count) { num in
+                        ForEach(0..<letters.count, id: \.self) { num in
                             Circle()
                                 .foregroundColor(.clear)
                                 .frame(width: 68, height: 68)
@@ -65,7 +66,7 @@ struct ChulLeongChulLeongView: View {
                     }
                     
                     HStack() {
-                        ForEach(0..<letters.count) { num in
+                        ForEach(0..<letters.count, id: \.self) { num in
                             Circle()
                                 .foregroundColor(.clear)
                                 .frame(width: 68, height: 68)
@@ -81,7 +82,7 @@ struct ChulLeongChulLeongView: View {
                         }
                     }
                     HStack() {
-                        ForEach(0..<letters.count) { num in
+                        ForEach(0..<letters.count, id: \.self) { num in
                             Circle()
                                 .foregroundColor(.clear)
                                 .frame(width: 68, height: 68)
