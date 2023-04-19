@@ -34,15 +34,19 @@ struct OnboardingView: View {
                 VStack(spacing: 5) {
                     Text("This App is about Onomatopoeia, Mimetic words of Hanguel.")
                         .font(.system(size: 25, weight: .regular))
+                        .modifier(FittingFontSizeModifier())
 
                     Text("I hope everybody \"Feel Hanguel\" through this app.")
                         .font(.system(size: 25, weight: .regular))
+                        .modifier(FittingFontSizeModifier())
                     
                     Text("All you need is iPad!")
                         .font(.system(size: 25, weight: .regular))
+                        .modifier(FittingFontSizeModifier())
                     
                     Text("Are you ready to start? Then, Let’s get started!")
                         .font(.system(size: 25, weight: .regular))
+                        .modifier(FittingFontSizeModifier())
       
                 }
 
@@ -54,6 +58,7 @@ struct OnboardingView: View {
                     Text("Please Preview this on iPad device 12.9 in LandscapeLeft orientation.\n THANK YOU👍")
                         .font(.system(size: 23, weight: .bold))
                         .foregroundColor(.red)
+                        .modifier(FittingFontSizeModifier())
          
                 }
                 
