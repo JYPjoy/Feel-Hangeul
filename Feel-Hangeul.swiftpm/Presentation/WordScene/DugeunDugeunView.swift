@@ -27,7 +27,7 @@ struct DugeunDugeunView: View {
                   Heart(date: timeline.date)
                  }
                 Spacer()
-                DetailWordView(word: "두근두근", meaning: "[Du-Geun-Du-Geun]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example: "ex> It has been raining 주룩주룩 all through the night.")
+                DetailWordView(word: "두근두근", meaning: "[Du-Geun-Du-Geun]", explanation: "▶︎ \"두근두근\" is a Korean onomatopoeic word, which mimcs the sound of heart beating. \nPeople use this word when they feel thrilled or nervous.", example: "▶︎ (ex) Everyday I go to Apple Developer Academy at Postech, my heart go 두근두근, is full of joy.")
                 Spacer()
             }
         }

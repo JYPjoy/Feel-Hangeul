@@ -62,13 +62,13 @@ struct MainView: View {
             }
         }
         .onAppear{
-            // TODO: 강제 오디오 스타트
-            do{
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
-                try AVAudioSession.sharedInstance().setActive(true)
-             }
-            catch
-            { print("Fail to enable session") }
+//            // TODO: 강제 오디오 스타트
+//            do{
+//                try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+//                try AVAudioSession.sharedInstance().setActive(true)
+//             }
+//            catch
+//            { print("Fail to enable session") }
         }
         .toolbar {
           ToolbarItem(placement: .navigationBarTrailing) {
