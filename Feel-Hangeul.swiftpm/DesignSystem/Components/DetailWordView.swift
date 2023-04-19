@@ -17,12 +17,14 @@ struct DetailWordView: View {
         VStack(spacing: 10){
             Text(word)
                 .font(.system(size: 80, weight: .bold))
+                .modifier(FittingFontSizeModifier())
                 .padding()
                 .shadow(color: .r3, radius: 5)
             
             HStack(spacing: 10) {
                 Text(meaning)
                     .font(.system(size: 30, weight: .regular))
+                    .modifier(FittingFontSizeModifier())
                 
                 Button {
                     TTSManager.shared.speak(TTSManager.getAVSpeechUtterance(string:word))
@@ -37,8 +39,10 @@ struct DetailWordView: View {
             VStack(alignment: .leading, spacing: 10) {
                 Text(explanation)
                     .font(.system(size: 25, weight: .regular))
+                    .modifier(FittingFontSizeModifier())
                 Text(example)
                     .font(.system(size: 25, weight: .regular))
+                    .modifier(FittingFontSizeModifier())
             }
         }
         .foregroundColor(.white)

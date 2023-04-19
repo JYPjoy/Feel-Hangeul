@@ -37,6 +37,7 @@ struct HeartShapeHeartBeat : Shape {
 struct HeartBeatView : View {
     @State var trimValue1 : CGFloat = 0
     @State var trimValue2 : CGFloat = 0
+    @State var show = false
    // @State private var phase = 0
 
     //MARK:- Timer
@@ -55,8 +56,10 @@ struct HeartBeatView : View {
             
         }
         .frame(height: 120) // changed from 300 to 120
-        .animation(.spring())
+        //.animation(.spring())
+        .animation(.spring(), value: show)
         .onReceive(timer, perform: { _ in
+            show.toggle()
             if trimValue2 == 0 {
                 trimValue2 = 1
             }
