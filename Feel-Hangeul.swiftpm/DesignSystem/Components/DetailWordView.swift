@@ -11,8 +11,7 @@ struct DetailWordView: View {
     let word: String
     let meaning: String
     let explanation: String
-    let example1: String
-    let example2: String
+    let example: String
     
     var body: some View {
         VStack(spacing: 10){
@@ -38,9 +37,7 @@ struct DetailWordView: View {
             VStack(alignment: .leading, spacing: 10) {
                 Text(explanation)
                     .font(.system(size: 25, weight: .regular))
-                Text(example1)
-                    .font(.system(size: 25, weight: .regular))
-                Text(example2)
+                Text(example)
                     .font(.system(size: 25, weight: .regular))
             }
         }
@@ -51,7 +48,7 @@ struct DetailWordView: View {
 
 struct wordView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailWordView(word: "주룩주룩", meaning: "Rainy", explanation: "설명", example1: "사용 예시1", example2: "사용 예시2")
+        DetailWordView(word: "주룩주룩", meaning: "Rainy", explanation: "설명", example: "사용 예시1")
             .previewInterfaceOrientation(.landscapeLeft)
             .background(.black)
     }

@@ -17,7 +17,7 @@ struct JuRukJuRukView: View {
             TimelineView(.periodic(from: .now, by: 0.05)) { timeline in
                 JuRukJuRukCanvas(date: timeline.date)
             }
-            DetailWordView(word: "주룩주룩", meaning: "[Ju-Ruk-Ju-Ruk]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example1: "- 애플 아카데미에서의 감정들", example2: "- It has been raining 주룩주룩 all thorugh the night.") //TODO: 해당 단어만 attributed text로 따로 굵기, 색상 다르게 하면 좋을 듯
+            DetailWordView(word: "주룩주룩", meaning: "[Ju-Ruk-Ju-Ruk]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example: "- 애플 아카데미에서의 감정들")
         }
     }
     
@@ -27,21 +27,20 @@ struct JuRukJuRukView: View {
 
         var body: some View {
             Canvas(renderer: renderer) {
-                // Column views tagged as Canvas symbols
                 ForEach(core.columns) { column in
                     JuRukJuRukColumn(id: column.id, date: date)
                         .tag(column.id)
                 }
             }
             .onChange(of: date) { (date: Date) in
-                // Add columns progressively, every `addColumnRate` seconds, up to a maximum of `maxColumns`
+                // 컬럼을 연속적으로 매초마다 더해줌
                 if core.columns.count < MatrixCore.maxColumns
                     && Date().timeIntervalSinceReferenceDate > core.lastAddDate.addingTimeInterval(MatrixCore.addColumnRate).timeIntervalSinceReferenceDate {
                     
                     core.addColumn()
                 }
                 
-                // update columns data (e.g., position, depth, character count, etc)
+                // 컬럼 데이터 업데이트
                 for idx in 0..<core.columns.count {
                     core.columns[idx].fallDown(date: date)
                 }
@@ -51,17 +50,17 @@ struct JuRukJuRukView: View {
         
         func renderer(context: inout GraphicsContext, size: CGSize) {
             
-            // Draw every column
+            // 모든 컬럼을 그림
             for column in core.columns.sorted(by: { $0.z > $1.z }) {
                 context.drawLayer { context in
                     
                     if let resolved = context.resolveSymbol(id: column.id) {
                         
-                        // Column location
+                        // 컬럼의 위치
                         let pt = CGPoint(x: column.origin.x * size.width,
                                          y: column.origin.y * size.height + column.offset)
                         
-                        // Blur and scale effect, based on column's depth
+                        // 컬럼의 depth에 따른 효과 적용
                         context.addFilter(.blur(radius: column.z * 3))
                         context.scaleBy(x: 1 - column.z * 0.3, y: 1 - column.z * 0.3)
                         

@@ -18,11 +18,15 @@ struct DugeunDugeunView: View {
         ZStack{
             Color(.black)
                 .ignoresSafeArea(.all)
-            VStack{
+            VStack(){
+                Spacer()
                 HeartBeatView()
                 TimelineView(.cyclic(timeOffsets: [0.2, 0.2, 0.4])) { timeline in
                   Heart(date: timeline.date)
                  }
+                Spacer()
+                DetailWordView(word: "두근두근", meaning: "[Du-Geun-Du-Geun]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example: "ex> It has been raining 주룩주룩 all through the night.")
+                Spacer()
             }
         }
         .onAppear {

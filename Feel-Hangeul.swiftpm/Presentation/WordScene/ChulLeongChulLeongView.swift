@@ -9,7 +9,7 @@ import SwiftUI
 
 // TODO: iPHONE에서 밑에 잘려 보이는 문제 해결해야 함
 struct ChulLeongChulLeongView: View {
-    let letters = Array("출렁출렁출렁출렁출렁출렁")
+    let letters = Array("출렁출렁출렁출렁출렁출렁출렁")
     @State private var enabled = false
     @State private var dragAmount = CGSize.zero
     
@@ -20,19 +20,21 @@ struct ChulLeongChulLeongView: View {
                 .ignoresSafeArea()
             VStack(){
                 VStack {
-                    DetailWordView(word: "출렁출렁", meaning: "[Chul-Leong-Chul-Leong]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example1: "ex> It has been raining 주룩주룩 all through the night.", example2: "ex> It has been raining 주룩주룩 all through the night.")
-                    
+                    Spacer()
+                    DetailWordView(word: "출렁출렁", meaning: "[Chul-Leong-Chul-Leong]", explanation: "주룩주룩 is a Korean mimetic word, which mimcs the sound of rain falling.", example: "ex> It has been raining 주룩주룩 all through the night.")
+                    Spacer()
                     Text("Drag any character below.")
                         .padding()
                         .background(.black)
                         .font(.system(size: 35, weight: .regular))
                         .foregroundColor(.white)
                         .modifier(FittingFontSizeModifier())
-                    
-                    HStack(spacing: 10) {
+                    Spacer()
+                    HStack() {
                         ForEach(0..<letters.count) { num in
                             Circle()
                                 .foregroundColor(.clear)
+                                .frame(width: 68, height: 68)
                                 .overlay{
                                     Text(String(letters[num]))
                                         .padding(5)
@@ -45,10 +47,11 @@ struct ChulLeongChulLeongView: View {
                         }
                     }
                     
-                    HStack(spacing: 10) {
+                    HStack() {
                         ForEach(0..<letters.count) { num in
                             Circle()
                                 .foregroundColor(.clear)
+                                .frame(width: 68, height: 68)
                                 .overlay{
                                     Text(String(letters[num]))
                                         .padding(5)
@@ -59,13 +62,13 @@ struct ChulLeongChulLeongView: View {
                                 .offset(dragAmount)
                                 .animation(.interpolatingSpring(stiffness: 170, damping: 5).delay(Double(num) / 20), value: dragAmount)
                         }
-                        
                     }
                     
-                    HStack(spacing: 10) {
+                    HStack() {
                         ForEach(0..<letters.count) { num in
                             Circle()
                                 .foregroundColor(.clear)
+                                .frame(width: 68, height: 68)
                                 .overlay{
                                     Text(String(letters[num]))
                                         .padding(5)
@@ -76,12 +79,12 @@ struct ChulLeongChulLeongView: View {
                                 .offset(dragAmount)
                                 .animation(.interpolatingSpring(stiffness: 170, damping: 5).delay(Double(num) / 20), value: dragAmount)
                         }
-                        
                     }
-                    HStack(spacing: 10) {
+                    HStack() {
                         ForEach(0..<letters.count) { num in
                             Circle()
                                 .foregroundColor(.clear)
+                                .frame(width: 68, height: 68)
                                 .overlay{
                                     Text(String(letters[num]))
                                         .padding(5)
@@ -92,9 +95,8 @@ struct ChulLeongChulLeongView: View {
                                 .offset(dragAmount)
                                 .animation(.interpolatingSpring(stiffness: 170, damping: 5).delay(Double(num) / 20), value: dragAmount)
                         }
-                        
                     }
-                    
+                    Spacer()
                 }
                 .padding()
                 .gesture(

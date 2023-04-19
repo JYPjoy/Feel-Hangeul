@@ -64,7 +64,7 @@ struct JjaengJjaengView: View {
                 
                 VStack(){
                     Spacer()
-                    DetailWordView(word: "쨍쨍", meaning: "[Jjaeng-Jjaeng]", explanation: "주룩주룩 is a Korean mimetic word, \nwhich mimcs the sound of rain falling.", example1: "ex> It has been raining 주룩주룩 all through the night.", example2: "ex> It has been raining 주룩주룩 all through the night.")
+                    DetailWordView(word: "쨍쨍", meaning: "[Jjaeng-Jjaeng]", explanation: "주룩주룩 is a Korean mimetic word, \nwhich mimcs the sound of rain falling.", example: "ex> It has been raining 주룩주룩 all through the night.")
                         .padding()
                 }
             }
