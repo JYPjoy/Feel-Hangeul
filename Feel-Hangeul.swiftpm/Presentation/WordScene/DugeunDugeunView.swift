@@ -60,7 +60,7 @@ struct Heart: View {
     
     var body: some View {
         HStack {
-            Text("두근")
+            Text("두근두근")
                 .font(.largeTitle)
                 .foregroundColor(.red)
                 .scaleEffect(scales[phase])
