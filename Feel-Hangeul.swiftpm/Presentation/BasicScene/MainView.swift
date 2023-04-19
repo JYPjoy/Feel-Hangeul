@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFAudio
 
 struct MainView: View {
     @StateObject var coordinator = Coordinator()
@@ -27,6 +28,12 @@ struct MainView: View {
                                     Button(action: {
                                         TTSManager.shared.speak(TTSManager.getAVSpeechUtterance(string:wordCard[index].word))
                                         coordinator.push(destination: wordCard[index].destination)
+                                        
+                                        // TODO: 2초 후 종료해야 되지 않을까?
+//                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+//                                            TTSManager.stop()
+//                                            coordinator.push(destination: wordCard[index].destination)
+//                                        }
                                     }){
                                         VStack(spacing: 10){
                                             Text(wordCard[index].word)
@@ -53,6 +60,15 @@ struct MainView: View {
                 .padding(.leading, 120)
                 .padding(.trailing, 550)
             }
+        }
+        .onAppear{
+            // TODO: 강제 오디오 스타트
+            do{
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+                try AVAudioSession.sharedInstance().setActive(true)
+             }
+            catch
+            { print("Fail to enable session") }
         }
         .toolbar {
           ToolbarItem(placement: .navigationBarTrailing) {

@@ -37,16 +37,17 @@ struct JjaengJjaengView: View {
                             .animation(Animation.easeInOut(duration: 1).repeatForever())
                     }
                     sun.foregroundColor(self.isAnimating ? Color.red : Color.j1).glow()
-                    Text("Long Press this circle.")
+                    Text("Long Press this circle\nfor 1second.")
+                        .multilineTextAlignment(.center)
                         .foregroundColor(self.isAnimating ? .black : .white)
-                        .font(.system(size: 25))
+                        .font(.system(size: 20, weight: .bold))
                     
                 }
                 .frame(width: 300, height: 300)
                 .scaleEffect(self.shrinkIcon ? 0.35 : 1)
                 .animation(Animation.spring(response: animationDuration, dampingFraction: 1, blendDuration: 1))
-                .offset(x: -200, y:0)
-                .onLongPressGesture {
+                .offset(x: -150, y:0)
+                .onLongPressGesture(minimumDuration: 0.2) {
                     if (!floatLike) {
                         self.floatLike.toggle()
                         self.isAnimating.toggle()
@@ -62,6 +63,7 @@ struct JjaengJjaengView: View {
                         self.floatLike = false
                     }
                 }
+                
                 
                 VStack(){
                     Spacer()
