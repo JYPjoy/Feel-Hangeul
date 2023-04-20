@@ -32,7 +32,7 @@ struct OnboardingView: View {
                     .font(.system(size: 50, weight: .bold))
                 
                 VStack(spacing: 5) {
-                    Text("This App is about Onomatopoeia, Mimetic words of Hanguel.")
+                    Text("This App is about Onomatopoeia, Mimetic words of Hangeul.")
                         .font(.system(size: 25, weight: .regular))
                         .modifier(FittingFontSizeModifier())
 
