@@ -24,8 +24,7 @@ struct BangUlBangUlView: View {
                 Spacer()
                 Spacer()
                 Spacer()
-                Spacer()
-                DetailWordView(word: "방울방울", meaning: "[Bang-Ul-Bang-Ul]", explanation: "▶︎ \"방울방울\" is a Korean mimetic word, which indicates condensation of tiny droplets of liquid.", example: "▶︎ (ex) Sweat beads were dripping down 방울방울 from his forehead.")
+                DetailWordView(word: "방울방울", meaning: "[Bang-Ul-Bang-Ul]", explanation: "▶︎ \"방울방울\" is a mimetic word, which indicates condensation of tiny droplets of liquid.", example: "▶︎ (ex) Sweat beads were dripping down 방울방울 from his forehead.")
                     .background(.black)
                 
                 Text("Touch any characters(방울) below. ")
