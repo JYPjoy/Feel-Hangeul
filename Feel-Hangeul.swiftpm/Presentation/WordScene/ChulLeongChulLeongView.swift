@@ -26,7 +26,7 @@ struct ChulLeongChulLeongView: View {
                     Spacer()
                     DetailWordView(word: "출렁출렁", meaning: "[Chul-Leong-Chul-Leong]", explanation: "▶︎ \"출렁출렁\" is a word used to describe the waves form big ripples repeatedly.", example: "▶︎ (ex) In Santa Monica Beach, you can see sea water is swaying 출렁출렁.")
                     Spacer()
-                    Text("Drag any character below.")
+                    Text("Drag any characters below.")
                         .padding()
                         .background(.black)
                         .font(.system(size: 35, weight: .regular))

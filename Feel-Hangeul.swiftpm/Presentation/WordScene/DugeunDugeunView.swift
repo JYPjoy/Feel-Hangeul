@@ -27,7 +27,7 @@ struct DugeunDugeunView: View {
                   Heart(date: timeline.date)
                  }
                 Spacer()
-                DetailWordView(word: "두근두근", meaning: "[Du-Geun-Du-Geun]", explanation: "▶︎ \"두근두근\" is a Korean onomatopoeic word, which mimics the sound of heart beating. \nPeople use this word when they feel thrilled or nervous. ", example: "▶︎ (ex) Everyday I go to Apple Developer Academy at Postech, my heart goes 두근두근, is filled with joy.") //My heart went pit a pat., blow one's mind
+                DetailWordView(word: "두근두근", meaning: "[Du-Geun-Du-Geun]", explanation: "▶︎ \"두근두근\" is a Korean onomatopoeic word, which mimics the sound of heart beating, \n\"pit a pat\" in English.People use this word when they feel thrilled or nervous. ", example: "▶︎ (ex) Everyday I go to Apple Developer Academy at Postech, my heart goes 두근두근, is filled with joy.") //My heart went pit a pat., blow one's mind
                 Spacer()
             }
         }

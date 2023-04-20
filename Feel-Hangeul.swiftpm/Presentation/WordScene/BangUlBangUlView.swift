@@ -21,47 +21,52 @@ struct BangUlBangUlView: View {
                 .ignoresSafeArea()
             
             VStack{
-                Text("Touch any characters(방울) on a background. ")
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                DetailWordView(word: "방울방울", meaning: "[Bang-Ul-Bang-Ul]", explanation: "▶︎ \"방울방울\" is a Korean mimetic word, which indicates condensation of tiny droplets of liquid.", example: "▶︎ (ex) Sweat beads were dripping down 방울방울 from his forehead.")
+                    .background(.black)
+                
+                Text("Touch any characters(방울) below. ")
                     .padding()
                     .background(.black)
                     .font(.system(size: 35, weight: .regular))
                     .foregroundColor(.white)
                     .modifier(FittingFontSizeModifier())
                 
-
-                DetailWordView(word: "방울방울", meaning: "[Bang-Ul-Bang-Ul]", explanation: "▶︎ (ex) \"방울방울\" is a korean mimetic word, \nwhich indicates condensation of tiny droplets of liquid.", example: "▶︎ Sweat beads were dripping down 방울방울 from his forehead.")
-                    .background(.black)
-            }
-            
-            ZStack{
-                ForEach (0..<50, id:\.self) { num in
-                    Circle ()
-                        .frame(width: .random(in: 1...100),
-                               height: CGFloat.random (in:20...100),
-                               alignment: .center)
-                        .foregroundColor(bubble ? [.b1, .b2].randomElement(): .clear)
-                        .animation(.easeOut(duration: 1), value: bubble)
-                        .opacity(0.5)
-                        .overlay(
-                            Text(String("방울"))
-                                .font(.system(size: 15))
-                                .foregroundColor(.bubble)
-                                .onTapGesture {
-                                    bubble.toggle()
-                                }
-                        )
-                    .onAppear { self.value = 0 }
-                    .onTapGesture {
-                        show.toggle()
+                ZStack{
+                    ForEach (0..<100, id:\.self) { num in
+                        Circle ()
+                            .frame(width: .random(in: 1...100),
+                                   height: CGFloat.random (in:20...100),
+                                   alignment: .center)
+                            .foregroundColor(bubble ? [.b1, .b2].randomElement(): .clear)
+                            .animation(.easeOut(duration: 1), value: bubble)
+                            .opacity(0.5)
+                            .overlay(
+                                Text(String("방울"))
+                                    .font(.system(size: 15))
+                                    .foregroundColor(.bubble)
+                                    .onTapGesture {
+                                        bubble.toggle()
+                                    }
+                            )
+                        .onAppear { self.value = 0 }
+                        .onTapGesture {
+                            show.toggle()
+                        }
+                        .scaleEffect(self.scale * .random(in: 1...2.5))
+                        .position(CGPoint(x: .random(in: 0...Const.width),y: .random(in:0...Const.height)))
                     }
-                    .scaleEffect(self.scale * .random(in: 1...2.5))
-                    .position(CGPoint(x: .random(in: 0...Const.width),y: .random(in:0...Const.height)))
                 }
             }
+            
+     
 
         }
         .onAppear {
-            self.scale = 1.2
+            self.scale = 1.1
             //show.toggle()
         }
         .toolbar {

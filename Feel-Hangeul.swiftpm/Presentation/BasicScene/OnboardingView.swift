@@ -27,7 +27,7 @@ struct OnboardingView: View {
     
                 Image("logo") //TODO: 로고가 와야 할 거 같음
                     .resizable()
-                    .frame(width: 150, height:150)
+                    .frame(width: 130, height:130)
                 Text("Feel Hangeul")
                     .font(.system(size: 50, weight: .bold))
                 
@@ -36,7 +36,7 @@ struct OnboardingView: View {
                         .font(.system(size: 25, weight: .regular))
                         .modifier(FittingFontSizeModifier())
 
-                    Text("I hope everybody \"Feel Hanguel\" through this app.")
+                    Text("I hope everybody \"Feel Hangeul\" through this app.")
                         .font(.system(size: 25, weight: .regular))
                         .modifier(FittingFontSizeModifier())
                     
@@ -55,12 +55,16 @@ struct OnboardingView: View {
                         .resizable()
                         .frame(width: 50, height: 50)
                     
-                    Text("Please view this on iPad Pro 12.9 device in LandscapeLeft orientation.\n THANK YOU👍")
-                        .font(.system(size: 23, weight: .bold))
-                        .foregroundColor(.red)
-                        .modifier(FittingFontSizeModifier())
-         
+                    VStack{
+                        Text("Please view this on an iPad Pro 12.9 device in LandscapeLeft orientation, \nusing either your hands or an Apple Pencil. THANK YOU👍")
+                            .font(.system(size: 23, weight: .bold))
+                            .foregroundColor(.red)
+                            .modifier(FittingFontSizeModifier())
+                    }
+               
+
                 }
+            
                 
                 Button{
                     coordinator.push(destination: .main)

@@ -38,7 +38,7 @@ struct BanjjakbanjjakView: View {
                         .position(CGPoint(x: .random(in: 0...Const.width),y: .random(in:0...Const.height)))
                 }
             }.glow()
-            DetailWordView(word: "반짝반짝", meaning: "[Ban-jjak-Ban-jjak]", explanation: "▶︎ \"반짝반짝\" means twinkling, sparking.", example: "▶︎ In Mauna Kea, you can see stars shining 반짝반짝 in the sky.").glow()
+            DetailWordView(word: "반짝반짝", meaning: "[Ban-jjak-Ban-jjak]", explanation: "▶︎ \"반짝반짝\" means twinkling, sparking.", example: "▶︎ (ex) In Mauna Kea, you can see stars shining 반짝반짝 in the sky.").glow()
         }
         .onAppear {
             self.scale = 1.2
