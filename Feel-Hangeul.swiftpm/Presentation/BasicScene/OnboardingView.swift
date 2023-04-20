@@ -55,7 +55,7 @@ struct OnboardingView: View {
                         .resizable()
                         .frame(width: 50, height: 50)
                     
-                    Text("Please Preview this on iPad device 12.9 in LandscapeLeft orientation.\n THANK YOU👍")
+                    Text("Please view this on iPad Pro 12.9 device in LandscapeLeft orientation.\n THANK YOU👍")
                         .font(.system(size: 23, weight: .bold))
                         .foregroundColor(.red)
                         .modifier(FittingFontSizeModifier())
