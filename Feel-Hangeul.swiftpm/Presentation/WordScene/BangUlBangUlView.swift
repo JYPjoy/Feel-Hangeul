@@ -14,54 +14,56 @@ struct BangUlBangUlView: View {
     @State private var value = 1.0
     @State var show = false
     
-    
     var body: some View {
         ZStack{
             coordinator.navigationLinkSection()
             Color.black
                 .ignoresSafeArea()
-
-//            Circle()
-//                .frame(width: 200, height:200)
-//                .opacity(0.5)
-//                .foregroundColor(bubble ? .yellow : .clear)
-//                .animation(.easeOut(duration: 1), value: bubble)
-//                .overlay{
-//                    Text("방울")
-//                        .font(.system(size: 100))
-//                        .foregaroundColor(.white)
-//
-//                }
-//                .onTapGesture {
-//                    bubble.toggle()
-//                }
             
+            VStack{
+                Text("Touch any characters(방울) on a background. ")
+                    .padding()
+                    .background(.black)
+                    .font(.system(size: 35, weight: .regular))
+                    .foregroundColor(.white)
+                    .modifier(FittingFontSizeModifier())
+                
+
+                DetailWordView(word: "방울방울", meaning: "[Bang-Ul-Bang-Ul]", explanation: "▶︎ (ex) \"방울방울\" is a korean mimetic word, \nwhich indicates condensation of tiny droplets of liquid.", example: "▶︎ Sweat beads were dripping down 방울방울 from his forehead.")
+                    .background(.black)
+            }
             
             ZStack{
-                ForEach (0..<150, id:\.self) { num in
+                ForEach (0..<50, id:\.self) { num in
                     Circle ()
+                        .frame(width: .random(in: 1...100),
+                               height: CGFloat.random (in:20...100),
+                               alignment: .center)
+                        .foregroundColor(bubble ? [.b1, .b2].randomElement(): .clear)
+                        .animation(.easeOut(duration: 1), value: bubble)
+                        .opacity(0.5)
                         .overlay(
                             Text(String("방울"))
-                                .font(.system(size: 18))
-                                .foregroundColor([.b1, .b2].randomElement())
+                                .font(.system(size: 15))
+                                .foregroundColor(.bubble)
+                                .onTapGesture {
+                                    bubble.toggle()
+                                }
                         )
-//                        .opacity(value)
-//                        //.animation(Animation.linear(duration:1.2).repeatForever(autoreverses: true), value: show)
-//                        .onAppear { self.value = 0 }
-//                        .scaleEffect(self.scale * .random(in: 1...2.5))
-//                        .frame(width: .random(in: 1...100),
-//                               height: CGFloat.random (in:20...100),
-//                               alignment: .center)
-//                        .position(CGPoint(x: .random(in: 0...Const.width),y: .random(in:0...Const.height)))
+                    .onAppear { self.value = 0 }
+                    .onTapGesture {
+                        show.toggle()
+                    }
+                    .scaleEffect(self.scale * .random(in: 1...2.5))
+                    .position(CGPoint(x: .random(in: 0...Const.width),y: .random(in:0...Const.height)))
                 }
             }
-            DetailWordView(word: "방울방울", meaning: "[Bang-Ul-Bang-Ul]", explanation: "▶︎ (ex) \"반짝반짝\" means twinkling, sparking", example: "▶︎ In Mauna Kea, you can see stars shining 반짝반짝 in the sky.")
+
         }
         .onAppear {
             self.scale = 1.2
-            show.toggle()
+            //show.toggle()
         }
-        
         .toolbar {
           ToolbarItem(placement: .navigationBarTrailing) {
             Button {
@@ -72,15 +74,6 @@ struct BangUlBangUlView: View {
         }
     }
 }
-
-//TODO: 할 일
-/*
-- 색깔 바뀔 때 애니메이션 효과 추가하기 ☑️
-- 방울방울 글씨를 여기저기에 뿌리기 (Bubble처럼)
- 클릭 시 커짐 
-- TapGesture 시 bubble이 나타나는 효과 추가하기☑️
- */
-
 
 struct BangUlBangUlView_Previews: PreviewProvider {
     static var previews: some View {

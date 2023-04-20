@@ -49,5 +49,8 @@ extension Color {
     static let b5 = Color(#colorLiteral(red: 0.968627451, green: 0.9803921569, blue: 0.5529411765, alpha: 1))
     static let b6 = Color(#colorLiteral(red: 0.9490196078, green: 0.6117647059, blue: 0, alpha: 1))
     static let b7 = Color(#colorLiteral(red: 0.7254901961, green: 0, blue: 0.02745098039, alpha: 1))
+    
+    //MARK: - Bubble
+    static let bubble = Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
 
 }
