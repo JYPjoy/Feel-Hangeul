@@ -46,4 +46,5 @@ For the people who don’t know Korean at all, I wanted this app to be a great c
 <br/>
 
 # 📑 License
-[License](https://github.com/JYPjoy/Feel-Hangeul/blob/main/LICENSE)
+[License](https://github.com/JYPjoy/Feel-Hangeul/blob/main/LICENSE) 
+MIT License | Copyright (c) 2023 JiYoung Park <br/>
