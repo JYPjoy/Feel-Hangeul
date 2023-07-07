@@ -9,7 +9,7 @@ import SwiftUI
 import AVFAudio
 
 struct MainView: View {
-    @StateObject var coordinator = Coordinator()
+    @StateObject var coordinator = Coordinator(isRoot: true)
     
     var body: some View {
         ZStack{
@@ -69,14 +69,6 @@ struct MainView: View {
 //             }
 //            catch
 //            { print("Fail to enable session") }
-        }
-        .toolbar {
-          ToolbarItem(placement: .navigationBarTrailing) {
-            Button {
-              coordinator.push(destination: .main)
-            } label: {
-            }
-          }
         }
     }
 }

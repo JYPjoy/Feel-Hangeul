@@ -12,11 +12,11 @@ struct ContentView: View {
   var body: some View {
       if #available(iOS 16.0, *) {
           NavigationStack {
-              OnboardingView()
+              MainView()
           }
       } else {
           NavigationView {
-              OnboardingView()
+              MainView()
           }
           .navigationViewStyle(.stack)
       }
