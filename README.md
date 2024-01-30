@@ -10,6 +10,9 @@ With this app, I wanted people to use **3 senses** - 👀sight, 👂hearing and 
 
 For the people who don’t know Korean at all, I wanted this app to be a great chance to have interest in Korean. For those who know the language already, I aimed that this app could help them use these expressions naturally when they write or speak in Korean. I just want people to enjoy beautiful Hangeul.
 
+With this App, I was invited to WWDC23, and met Tim Cook, the CEO of Apple at Apple Park!
+
+For more details, see [Interview](https://www.sookmyung.ac.kr/kr/news/sm-interview.do?mode=view&articleNo=85126)
 <br/>
 
 # ⚒️ Tech Stack
@@ -22,10 +25,6 @@ For the people who don’t know Korean at all, I wanted this app to be a great c
 <br/>
 
 # 📱 Screenshots
-
-### Full Demo
-
-**Full Demo** : [Feel Hangeul](https://www.youtube.com/watch?v=Du4sIPCdWCY)<br/>
 
 ### Main Page  
 <img src = "https://github.com/JYPjoy/Feel-Hangeul/blob/main/screenshots/mainPage.png?raw=true" width = "1000" height = "550"> <br/><br/>
