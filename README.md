@@ -46,8 +46,9 @@ For more details, see [Interview](https://www.sookmyung.ac.kr/kr/news/sm-intervi
 
 
 # 🔗 AppStore
-|AppStore Link|
+|[AppStore Link|
 |:----------:|
+|[Link](https://apps.apple.com/kr/app/feel-hangeul/id6451010427)|
 |<img src="https://github.com/JYPjoy/Feel-Hangeul/assets/84610593/1539e207-32c7-4686-8d68-f2934b52fa19" width=180>|
 
 <br/>
