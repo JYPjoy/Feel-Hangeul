@@ -4,7 +4,7 @@
 
 # 👩🏻‍💻 About App
 **🏆 [Accepted] WWDC2023 Swift Student Challenge**🏆<br/><br/>
-**Feel Hangeul** is an app about Onomatopoeia, Mimetic words of **Hangeul**. In the app, I chose 6 Korean words, and introduced their meaning by using animation effect.<br/>
+**Feel Hangeul** is an ipad app about Onomatopoeia, Mimetic words of **Hangeul**. In the app, I chose 6 Korean words, and introduced their meaning by using animation effect.<br/>
 
 With this app, I wanted people to use **3 senses** - 👀sight, 👂hearing and 👆🏻touch - to **feel** how expressive **Hangeul** is.<br/>
 
