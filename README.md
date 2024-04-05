@@ -12,7 +12,7 @@ For the people who don’t know Korean at all, I wanted this app to be a great c
 
 With this App, I was invited to WWDC23, and met **Tim Cook**, the CEO of Apple at 🌈 **Apple Park**! 
 
-For more details, see [Interview](https://www.sookmyung.ac.kr/kr/news/sm-interview.do?mode=view&articleNo=85126).  (Due to the limited time, it took only 4 days to complete.😂)
+For more details, see [Interview](https://www.sookmyung.ac.kr/kr/news/sm-interview.do?mode=view&articleNo=85126).
 <br/>
 
 # ⚒️ Tech Stack
